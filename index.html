@@ -1,89 +1,217 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+
+//Web de SdeA Soluciones - dominio alojado en DonDominio y web inicialmente creada en dicho servicio mediante parking. Posteriormente, re-creada mediante Azure, que gestiona el dominio www.sdeasolucines.es desde el 23-11-2025.
+
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>SdeA - Soluciones de Análisis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SdeA – Soluciones de Análisis</title>
-  <meta name="description" content="Web promocional de SdeA Soluciones de Análisis" />
+  <meta name="description" content="SdeA - Soluciones de Análisis. Soluciones tecnológicas de reporting, análisis de estados financieros y reporting de sostenibilidad conforme a CSRD, ESRS, VSME y normativa española.">
+
+  <!-- Fuente Cookie para el logo y el nombre comercial -->
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
   <style>
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:#ffffff;
-      color:#333;
-      text-align:center;
+    :root {
+      --sdea-orange: #f97316;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --bg-page: #f5f5f5;
     }
-    .container{
-      max-width:700px;
-      margin:40px auto;
-      padding:30px 20px;
-      border-radius:12px;
-      box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .logo{
-      width:90px;
-      height:90px;
-      margin:0 auto 15px;
-      border-radius:50%;
-      background:#282828;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-weight:700;
-      font-size:32px;
-      user-select:none;
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    h1{ color:#b30000; margin:10px 0 6px; }
-    h2{ margin:0 0 18px; font-weight:400; color:#444; font-size:18px; }
-    ul{
-      list-style:none;
-      padding:0;
-      margin:25px auto 0;
-      text-align:left;
-      max-width:520px;
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    li{
-      margin:12px 0;
-      font-size:16px;
-      line-height:1.35;
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
     }
-    li::before{
-      content:"•";
-      color:#b30000;
-      font-weight:700;
-      margin-right:8px;
+
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      max-width: 680px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 1.5rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e5e5e5;
     }
-    footer{
-      margin-top:28px;
-      font-size:14px;
-      color:#666;
+
+    /* Encabezado con logo tipo app */
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
     }
-    a{ color:#b30000; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+
+    .brand-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--sdea-orange);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cookie", cursive;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .brand-text {
+      font-family: "Cookie", cursive;
+      font-size: 26px;
+      color: #444444;
+    }
+
+    .title-main {
+      font-size: 26px;
+      font-weight: 700;
+      color: #d60000;
+      margin-bottom: 0.4rem;
+    }
+
+    .title-sub {
+      font-size: 18px;
+      font-weight: 400;
+      color: #444444;
+      margin-bottom: 1.5rem;
+    }
+
+    .content {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444444;
+    }
+
+    .content p {
+      margin-bottom: 0.75rem;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Pie de página */
+    footer {
+      border-top: 1px solid #e5e5e5;
+      padding: 0.75rem 1rem 1.25rem;
+      background: #fafafa;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .footer-contact {
+      margin-bottom: 0.35rem;
+    }
+
+    .footer-contact strong {
+      color: #555555;
+    }
+
+    .footer-contact a {
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #999999;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1.75rem 1.25rem 1.25rem;
+      }
+
+      .brand-text {
+        font-size: 22px;
+      }
+
+      .title-main {
+        font-size: 22px;
+      }
+
+      .title-sub {
+        font-size: 16px;
+      }
+
+      .content {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <!-- LOGO -->
-    <!-- Si quieres un logo real, sube un archivo "logo.png" al repo y descomenta la línea <img> -->
-    <div class="logo">SdeA</div>
-    <!-- <img src="logo.png" alt="SdeA" style="width:100px;height:100px;border-radius:50%;margin:0 auto 15px;display:block;" /> -->
+  <div class="page">
+    <main>
+      <section class="card">
+        <header class="header">
+          <div class="brand-wrapper">
+            <div class="brand-logo">SdeA</div>
+            <div class="brand-text">Soluciones de Análisis</div>
+          </div>
 
-    <h1>SdeA – Soluciones de Análisis</h1>
-    <h2>Soluciones para análisis financiero y reporting</h2>
+          <h1 class="title-main">SdeA - Soluciones de Análisis</h1>
+          <h2 class="title-sub">SdeA - Soluciones de Análisis</h2>
+        </header>
 
-    <ul>
-      <li>Soluciones tecnológicas de <strong>reporting</strong></li>
-      <li>Análisis de estados financieros conforme a <strong>PGC 2007</strong></li>
-      <li>Información no financiera y de sostenibilidad conforme a <strong>CSRD, ESRS, VSME</strong> y normativa española</li>
-    </ul>
+        <div class="content">
+          <p>*Soluciones tecnológicas de "reporting"</p>
+          <p>*Análisis de estados financieros conforme a PGC 2007</p>
+          <p>*Información no financiera o de sostenibilidad de acuerdo a CSRD, ESRS, VSME y normativa española.</p>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <p><strong>Información de contacto</strong></p>
-      <p>Email: <a href="mailto:info@sdeasoluciones.es">info@sdeasoluciones.es</a></p>
-      <p>© 2025 – SdeA · Soluciones de Análisis</p>
+      <div class="footer-inner">
+        <div class="footer-contact">
+          <strong>Información de contacto</strong><br />
+          Email:
+          <a href="mailto:info@sdeasoluciones.es">info@sdeasoluciones.es</a>
+        </div>
+        <div class="footer-copy">
+          © 2025 - SdeA - Soluciones de Análisis
+        </div>
+      </div>
     </footer>
   </div>
 </body>
