@@ -1,125 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Condiciones del servicio de SdeA Pedidos | SdeA Soluciones</title>
-<meta name="description" content="Condiciones del servicio de SdeA Pedidos, asistente de WhatsApp en pruebas privadas por invitación de SdeA Soluciones.">
-<style>
-  :root {
-    --fondo: #ffffff;
-    --texto: #1c2430;
-    --suave: #5a6675;
-    --linea: #d9dee5;
-    --acento: #1f4b7a;
-    --aviso-fondo: #fdf1f0;
-    --aviso-borde: #b3342b;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --fondo: #12181f;
-      --texto: #e6eaef;
-      --suave: #9aa6b4;
-      --linea: #2a3441;
-      --acento: #8fb8e6;
-      --aviso-fondo: #2a1a19;
-      --aviso-borde: #e0736a;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Condiciones del servicio de SdeA Pedidos | SdeA Soluciones</title>
+  <meta name="description" content="Condiciones del servicio de SdeA Pedidos, asistente de WhatsApp en pruebas privadas por invitación de SdeA Soluciones." />
+  <link rel="canonical" href="https://www.sdeasoluciones.es/condiciones/" />
+  <style>
+    @font-face {
+      font-family: "Cookie";
+      src: url("/assets/fonts/Cookie-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
     }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--fondo);
-    color: var(--texto);
-    font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  .cabecera, main, .pie {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-  .cabecera {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--linea);
-  }
-  .marca { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--texto); }
-  .submarca { color: var(--suave); }
-  a { color: var(--acento); }
-  a:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
-  h1 { font-size: 1.9rem; line-height: 1.2; margin: 2rem 0 0.25rem; }
-  h2 { font-size: 1.2rem; line-height: 1.3; margin: 2rem 0 0.5rem; }
-  .estado { color: var(--suave); margin: 0 0 1.5rem; }
-  ul { padding-left: 1.25rem; }
-  li { margin: 0.25rem 0; }
-  .urgencia {
-    background: var(--aviso-fondo);
-    border-left: 4px solid var(--aviso-borde);
-    padding: 0.75rem 1rem;
-    margin: 1rem 0;
-  }
-  .pie {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--linea);
-    color: var(--suave);
-    font-size: 0.95rem;
-  }
-</style>
+
+    :root {
+      --sdea-orange: #f97316;
+      --accent: #d00000;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --border: #e5e5e5;
+      --bg-page: #ffffff;
+      --bg-footer: #fafafa;
+      --link-soft: #4f6f8f;
+      --link-soft-hover: #365a78;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; padding: 2rem 1rem; }
+
+    .card {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+      background: #ffffff;
+    }
+
+    .brand-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--sdea-orange);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cookie", cursive;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .brand-text {
+      font-family: "Cookie", cursive;
+      font-size: 30px;
+      color: #444444;
+    }
+
+    h1 {
+      color: var(--accent);
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.25;
+      margin-bottom: 0.45rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #555555;
+      font-size: 17px;
+      margin-bottom: 2rem;
+    }
+
+    section { margin-top: 1.9rem; }
+    section:first-of-type { margin-top: 0; }
+
+    h2 {
+      font-size: 19px;
+      margin-bottom: 0.7rem;
+      color: #3d3d3d;
+    }
+
+    p { margin-bottom: 0.95rem; }
+
+    ul { margin: 0 0 0.95rem 1.4rem; }
+    li { margin-bottom: 0.35rem; }
+
+    .urgencia {
+      background: #fff4f3;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.95rem;
+    }
+    .urgencia p { margin-bottom: 0; }
+
+    a {
+      color: var(--link-soft);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover { color: var(--link-soft-hover); }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+
+    .updated {
+      margin-top: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 0.9rem 1rem 1.25rem;
+      background: var(--bg-footer);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-inner { max-width: 760px; margin: 0 auto; }
+    .footer-contact { margin-bottom: 0.35rem; }
+    .footer-contact strong { color: #555555; }
+    .footer-copy { color: var(--text-muted); }
+
+    @media (max-width: 700px) {
+      main { padding: 1rem 0.8rem; }
+      .card { padding: 1.5rem 1.2rem 1.75rem; }
+      .brand-wrapper { gap: 0.7rem; }
+      .brand-logo { width: 48px; height: 48px; font-size: 25px; }
+      .brand-text { font-size: 27px; }
+      h1 { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
 </head>
+
 <body>
-<header class="cabecera">
-  <a class="marca" href="/index.html">SdeA</a>
-  <span class="submarca">Soluciones de Análisis</span>
-</header>
+  <div class="page">
+    <main>
+      <article class="card">
+        <header>
+          <div class="brand-wrapper">
+            <div class="brand-logo">SdeA</div>
+            <div class="brand-text">Soluciones de Análisis</div>
+          </div>
+          <h1>Condiciones del servicio de SdeA Pedidos</h1>
+          <p class="subtitle">SdeA Soluciones · Pruebas privadas por invitación · Fase precomercial</p>
+        </header>
+        <section>
+          <h2>1. Qué es SdeA Pedidos</h2>
+          <p><strong>SdeA Pedidos</strong> es un asistente experimental que atiende mensajes de WhatsApp y registra pedidos de prueba. Está en pruebas privadas por invitación y en fase precomercial: no se cobra nada y no es un servicio abierto al público. Puede cambiar, interrumpirse o retirarse en cualquier momento.</p>
+        </section>
 
-<main>
-<h1>Condiciones del servicio de SdeA Pedidos</h1>
-<p class="estado">SdeA Soluciones · Pruebas privadas por invitación · Fase precomercial</p>
+        <section>
+          <h2>2. Quién puede usarlo y cómo</h2>
+          <ul>
+            <li>Solo pueden participar personas adultas invitadas previamente.</li>
+            <li>Se debe usar de forma razonable y respetando las condiciones de WhatsApp.</li>
+            <li>No se debe enviar contenido ilícito, ofensivo ni datos de pago o datos sensibles.</li>
+          </ul>
+        </section>
 
-<h2>1. Qué es SdeA Pedidos</h2>
-<p><strong>SdeA Pedidos</strong> es un asistente experimental que atiende mensajes de WhatsApp y registra pedidos de prueba. Está en pruebas privadas por invitación y en fase precomercial: no se cobra nada y no es un servicio abierto al público. Puede cambiar, interrumpirse o retirarse en cualquier momento.</p>
+        <section>
+          <h2>3. Los pedidos de prueba no son vinculantes</h2>
+          <p>Los pedidos, precios, horarios de entrega y confirmaciones que se obtengan durante las pruebas son orientativos. No constituyen un contrato ni un compromiso de entrega. Cuando las pruebas se realicen junto a un distribuidor, los pedidos reales los confirmará directamente el propio distribuidor.</p>
+        </section>
 
-<h2>2. Quién puede usarlo y cómo</h2>
-<ul>
-  <li>Solo pueden participar personas adultas invitadas previamente.</li>
-  <li>Se debe usar de forma razonable y respetando las condiciones de WhatsApp.</li>
-  <li>No se debe enviar contenido ilícito, ofensivo ni datos de pago o datos sensibles.</li>
-</ul>
+        <section>
+          <h2>4. Emergencias y seguridad</h2>
+          <div class="urgencia">
+            <p><strong>El asistente no es un canal de emergencias.</strong> Si hueles a gas o sospechas una fuga: abre las ventanas, no acciones interruptores ni uses llamas, cierra la llave de la bombona y llama al <strong>112</strong> desde el exterior.</p>
+          </div>
+        </section>
 
-<h2>3. Los pedidos de prueba no son vinculantes</h2>
-<p>Los pedidos, precios, horarios de entrega y confirmaciones que se obtengan durante las pruebas son orientativos. No constituyen un contrato ni un compromiso de entrega. Cuando las pruebas se realicen junto a un distribuidor, los pedidos reales los confirmará directamente el propio distribuidor.</p>
+        <section>
+          <h2>5. Disponibilidad y responsabilidad</h2>
+          <p>El servicio se ofrece «tal cual», sin garantías de disponibilidad ni de ausencia de errores. En la medida permitida por la ley, SdeA Soluciones no responde de interrupciones, errores o pérdidas derivados del uso de las pruebas. Esto no afecta a los derechos que la normativa reconozca a las personas de forma imperativa.</p>
+        </section>
 
-<h2>4. Emergencias y seguridad</h2>
-<div class="urgencia">
-  <p><strong>El asistente no es un canal de emergencias.</strong> Si hueles a gas o sospechas una fuga: abre las ventanas, no accciones interruptores ni uses llamas, cierra la llave de la bombona y llama al <strong>112</strong> desde el exterior.</p>
-</div>
+        <section>
+          <h2>6. Datos personales</h2>
+          <p>El tratamiento de datos personales se describe en la <a href="/privacidad/">política de privacidad de SdeA Pedidos</a>.</p>
+        </section>
 
-<h2>5. Disponibilidad y responsabilidad</h2>
-<p>El servicio se ofrece «tal cual», sin garantías de disponibilidad ni de ausencia de errores. En la medida permitida por la ley, SdeA Soluciones no responde de interrupciones, errores o pérdidas derivados del uso de las pruebas. Esto no afecta a los derechos que la normativa reconozca a las personas de forma imperativa.</p>
+        <section>
+          <h2>7. Servicios de terceros</h2>
+          <p>El asistente funciona a través de WhatsApp y Meta y se ejecuta en Cloudflare. El uso de esos servicios se rige además por sus propias condiciones.</p>
+        </section>
 
-<h2>6. Datos personales</h2>
-<p>El tratamiento de datos personales se describe en la <a href="https://www.sdeasoluciones.es/privacidad/">política de privacidad de SdeA Pedidos</a>.</p>
+        <section>
+          <h2>8. Propiedad intelectual</h2>
+          <p>El software, los textos y los demás contenidos del asistente pertenecen a sus titulares y están protegidos por la normativa de propiedad intelectual. Participar en las pruebas no implica cesión de derechos.</p>
+        </section>
 
-<h2>7. Servicios de terceros</h2>
-<p>El asistente funciona a través de WhatsApp y Meta y se ejecuta en Cloudflare. El uso de esos servicios se rige además por sus propias condiciones.</p>
+        <section>
+          <h2>9. Legislación aplicable y contacto</h2>
+          <p>Estas condiciones se rigen por la legislación española. Para cualquier consulta, escribe a <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a>. Consulta también la <a href="/informacion-legal.html">información legal y privacidad</a> del sitio.</p>
+          <p class="updated"><strong>Última actualización:</strong> 22 de octubre de 2026.</p>
+        </section>
+        <a class="back-link" href="/index.html">← Volver a SdeA Soluciones</a>
+      </article>
+    </main>
 
-<h2>8. Propiedad intelectual</h2>
-<p>El software, los textos y los demás contenidos del asistente pertenecen a sus titulares y están protegidos por la normativa de propiedad intelectual. Participar en las pruebas no implica cesión de derechos.</p>
-
-<h2>9. Legislación aplicable y contacto</h2>
-<p>Estas condiciones se rigen por la legislación española. Para cualquier consulta, escribe a <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a>.</p>
-<p><strong>Última actualización:</strong> 22 de octubre de 2026.</p>
-</main>
-
-<footer class="pie">
-  <p><a href="https://www.sdeasoluciones.es/privacidad/">Política de privacidad de SdeA Pedidos</a> · <a href="https://www.sdeasoluciones.es/informacion-legal.html">Información legal y privacidad</a> · <a href="https://www.sdeasoluciones.es/index.html">Volver a SdeA Soluciones</a></p>
-  <p>Contacto: <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a><br>© 2025–2026 SdeA Soluciones</p>
-</footer>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-contact">
+          <strong>Contacto</strong><br />
+          <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a>
+        </div>
+        <div class="footer-copy">© 2025–2026 SdeA Soluciones</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
