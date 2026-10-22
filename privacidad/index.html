@@ -1,129 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Política de privacidad de SdeA Pedidos | SdeA Soluciones</title>
-<meta name="description" content="Política de privacidad de SdeA Pedidos, asistente de WhatsApp en pruebas privadas por invitación de SdeA Soluciones.">
-<style>
-  :root {
-    --fondo: #ffffff;
-    --texto: #1c2430;
-    --suave: #5a6675;
-    --linea: #d9dee5;
-    --acento: #1f4b7a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --fondo: #12181f;
-      --texto: #e6eaef;
-      --suave: #9aa6b4;
-      --linea: #2a3441;
-      --acento: #8fb8e6;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de privacidad de SdeA Pedidos | SdeA Soluciones</title>
+  <meta name="description" content="Política de privacidad de SdeA Pedidos, asistente de WhatsApp en pruebas privadas por invitación de SdeA Soluciones." />
+  <link rel="canonical" href="https://www.sdeasoluciones.es/privacidad/" />
+  <style>
+    @font-face {
+      font-family: "Cookie";
+      src: url("/assets/fonts/Cookie-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
     }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--fondo);
-    color: var(--texto);
-    font: 1.0625rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  .cabecera, main, .pie {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-  .cabecera {
-    display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--linea);
-  }
-  .marca { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--texto); }
-  .submarca { color: var(--suave); }
-  a { color: var(--acento); }
-  a:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
-  h1 { font-size: 1.9rem; line-height: 1.2; margin: 2rem 0 0.25rem; }
-  h2 { font-size: 1.2rem; line-height: 1.3; margin: 2rem 0 0.5rem; }
-  .estado { color: var(--suave); margin: 0 0 1.5rem; }
-  ul { padding-left: 1.25rem; }
-  li { margin: 0.25rem 0; }
-  .pie {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--linea);
-    color: var(--suave);
-    font-size: 0.95rem;
-  }
-</style>
+
+    :root {
+      --sdea-orange: #f97316;
+      --accent: #d00000;
+      --text-main: #333333;
+      --text-muted: #777777;
+      --border: #e5e5e5;
+      --bg-page: #ffffff;
+      --bg-footer: #fafafa;
+      --link-soft: #4f6f8f;
+      --link-soft-hover: #365a78;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; padding: 2rem 1rem; }
+
+    .card {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2.25rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+      background: #ffffff;
+    }
+
+    .brand-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--sdea-orange);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cookie", cursive;
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .brand-text {
+      font-family: "Cookie", cursive;
+      font-size: 30px;
+      color: #444444;
+    }
+
+    h1 {
+      color: var(--accent);
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.25;
+      margin-bottom: 0.45rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #555555;
+      font-size: 17px;
+      margin-bottom: 2rem;
+    }
+
+    section { margin-top: 1.9rem; }
+    section:first-of-type { margin-top: 0; }
+
+    h2 {
+      font-size: 19px;
+      margin-bottom: 0.7rem;
+      color: #3d3d3d;
+    }
+
+    p { margin-bottom: 0.95rem; }
+
+    ul { margin: 0 0 0.95rem 1.4rem; }
+    li { margin-bottom: 0.35rem; }
+
+    .urgencia {
+      background: #fff4f3;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.95rem;
+    }
+    .urgencia p { margin-bottom: 0; }
+
+    a {
+      color: var(--link-soft);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover { color: var(--link-soft-hover); }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 600;
+    }
+
+    .updated {
+      margin-top: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 0.9rem 1rem 1.25rem;
+      background: var(--bg-footer);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-inner { max-width: 760px; margin: 0 auto; }
+    .footer-contact { margin-bottom: 0.35rem; }
+    .footer-contact strong { color: #555555; }
+    .footer-copy { color: var(--text-muted); }
+
+    @media (max-width: 700px) {
+      main { padding: 1rem 0.8rem; }
+      .card { padding: 1.5rem 1.2rem 1.75rem; }
+      .brand-wrapper { gap: 0.7rem; }
+      .brand-logo { width: 48px; height: 48px; font-size: 25px; }
+      .brand-text { font-size: 27px; }
+      h1 { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      h2 { font-size: 18px; }
+    }
+  </style>
 </head>
+
 <body>
-<header class="cabecera">
-  <a class="marca" href="/index.html">SdeA</a>
-  <span class="submarca">Soluciones de Análisis</span>
-</header>
+  <div class="page">
+    <main>
+      <article class="card">
+        <header>
+          <div class="brand-wrapper">
+            <div class="brand-logo">SdeA</div>
+            <div class="brand-text">Soluciones de Análisis</div>
+          </div>
+          <h1>Política de privacidad de SdeA Pedidos</h1>
+          <p class="subtitle">SdeA Soluciones · Pruebas privadas por invitación · Fase precomercial</p>
+        </header>
+        <section>
+          <h2>1. Qué es SdeA Pedidos y quién lo gestiona</h2>
+          <p><strong>SdeA Pedidos</strong> es un asistente experimental que recibe mensajes por WhatsApp y registra pedidos de prueba. Está en pruebas privadas: solo participan personas adultas invitadas, que han sido informadas antes de empezar. No es un servicio abierto al público ni se ofrece de forma comercial.</p>
+          <p>
+            <strong>Responsable del tratamiento:</strong> SdeA Soluciones (denominación utilizada).<br />
+            <strong>Contacto:</strong> <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a><br />
+            <strong>Sitio web:</strong> www.sdeasoluciones.es
+          </p>
+          <p>La información general sobre el proyecto y la privacidad del sitio web está en <a href="/informacion-legal.html">Información legal y privacidad</a>. Esta página se refiere solo a las pruebas de SdeA Pedidos.</p>
+        </section>
 
-<main>
-<h1>Política de privacidad de SdeA Pedidos</h1>
-<p class="estado">SdeA Soluciones · Pruebas privadas por invitación · Fase precomercial</p>
+        <section>
+          <h2>2. Qué datos se tratan</h2>
+          <ul>
+            <li>El número de teléfono de WhatsApp desde el que se escribe y el nombre de perfil que aparece en WhatsApp.</li>
+            <li>El contenido de los mensajes de texto que la persona envía al asistente.</li>
+            <li>Los datos de un pedido de prueba (por ejemplo, producto, cantidad, dirección de entrega y observaciones), solo si la persona los facilita.</li>
+            <li>Datos técnicos de funcionamiento, como la fecha y hora de los mensajes y sus identificadores.</li>
+          </ul>
+          <p>No se piden datos de pago ni datos sensibles. Se ruega no incluirlos en los mensajes.</p>
+        </section>
 
-<h2>1. Qué es SdeA Pedidos y quién lo gestiona</h2>
-<p><strong>SdeA Pedidos</strong> es un asistente experimental que recibe mensajes por WhatsApp y registra pedidos de prueba. Está en pruebas privadas: solo participan personas adultas invitadas, que han sido informadas antes de empezar. No es un servicio abierto al público ni se ofrece de forma comercial.</p>
-<p><strong>Responsable del tratamiento:</strong> SdeA Soluciones (denominación utilizada).<br>
-<strong>Contacto:</strong> <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a><br>
-<strong>Sitio web:</strong> www.sdeasoluciones.es</p>
-<p>La información general sobre el proyecto y la privacidad del sitio web está en <a href="https://www.sdeasoluciones.es/informacion-legal.html">Información legal y privacidad</a>. Esta página se refiere solo a las pruebas de SdeA Pedidos.</p>
+        <section>
+          <h2>3. Para qué se usan y con qué base jurídica</h2>
+          <p>Los datos se usan para probar el funcionamiento técnico del asistente: recibir mensajes, registrar pedidos de prueba, responder y detectar y corregir errores.</p>
+          <p>La base jurídica es el consentimiento de la persona invitada, que participa de forma voluntaria en las pruebas y puede retirarlo en cualquier momento escribiendo al contacto indicado. No se toman decisiones con efectos jurídicos basadas únicamente en tratamientos automatizados ni se elaboran perfiles publicitarios.</p>
+        </section>
 
-<h2>2. Qué datos se tratan</h2>
-<ul>
-  <li>El número de teléfono de WhatsApp desde el que se escribe y el nombre de perfil que aparece en WhatsApp.</li>
-  <li>El contenido de los mensajes de texto que la persona envía al asistente.</li>
-  <li>Los datos de un pedido de prueba (por ejemplo, producto, cantidad, dirección de entrega y observaciones), solo si la persona los facilita.</li>
-  <li>Datos técnicos de funcionamiento, como la fecha y hora de los mensajes y sus identificadores.</li>
-</ul>
-<p>No se piden datos de pago ni datos sensibles. Se ruega no incluirlos en los mensajes.</p>
+        <section>
+          <h2>4. Quién más interviene</h2>
+          <ul>
+            <li><strong>WhatsApp y Meta:</strong> la plataforma de WhatsApp Business recibe y transmite los mensajes. Su tratamiento se rige por sus propias condiciones y políticas.</li>
+            <li><strong>Cloudflare:</strong> aloja y ejecuta el programa del asistente, por cuenta del responsable.</li>
+          </ul>
+          <p>No se venden datos personales ni se ceden a terceros salvo obligación legal. Si en el futuro se incorporan otros proveedores, por ejemplo para interpretar mensajes mediante un modelo de lenguaje, esta política se actualizará antes de usarlos con datos de las personas invitadas.</p>
+        </section>
 
-<h2>3. Para qué se usan y con qué base jurídica</h2>
-<p>Los datos se usan para probar el funcionamiento técnico del asistente: recibir mensajes, registrar pedidos de prueba, responder y detectar y corregir errores.</p>
-<p>La base jurídica es el consentimiento de la persona invitada, que participa de forma voluntaria en las pruebas y puede retirarlo en cualquier momento escribiendo al contacto indicado. No se toman decisiones con efectos jurídicos basadas únicamente en tratamientos automatizados ni se elaboran perfiles publicitarios.</p>
+        <section>
+          <h2>5. Transferencias internacionales</h2>
+          <p>Los proveedores mencionados pueden tratar datos fuera del Espacio Económico Europeo, por ejemplo en Estados Unidos. Estas transferencias se amparan en las garantías que dichos proveedores ofrecen conforme al RGPD, como las cláusulas contractuales tipo o el marco de privacidad de datos UE-EE. UU., según se describe en sus propias políticas.</p>
+        </section>
 
-<h2>4. Quién más interviene</h2>
-<ul>
-  <li><strong>WhatsApp y Meta:</strong> la plataforma de WhatsApp Business recibe y transmite los mensajes. Su tratamiento se rige por sus propias condiciones y políticas.</li>
-  <li><strong>Cloudflare:</strong> aloja y ejecuta el programa del asistente, por cuenta del responsable.</li>
-</ul>
-<p>No se venden datos personales ni se ceden a terceros salvo obligación legal. Si en el futuro se incorporan otros proveedores, por ejemplo para interpretar mensajes mediante un modelo de lenguaje, esta política se actualizará antes de usarlos con datos de las personas invitadas.</p>
+        <section>
+          <h2>6. Cuánto tiempo se conservan</h2>
+          <p>Los mensajes y los datos de pedidos de prueba se conservan mientras duren las pruebas y, como máximo, durante 90 días después de su finalización, salvo que antes se solicite su supresión. Los registros técnicos del sistema no incluyen el contenido de los mensajes.</p>
+        </section>
 
-<h2>5. Transferencias internacionales</h2>
-<p>Los proveedores mencionados pueden tratar datos fuera del Espacio Económico Europeo, por ejemplo en Estados Unidos. Estas transferencias se amparan en las garantías que dichos proveedores ofrecen conforme al RGPD, como las cláusulas contractuales tipo o el marco de privacidad de datos UE-EE. UU., según se describe en sus propias políticas.</p>
+        <section>
+          <h2>7. Seguridad</h2>
+          <p>Se aplican medidas razonables para la fase de pruebas: conexiones cifradas, comprobación de que los avisos proceden realmente de Meta, claves guardadas como secretos y acceso restringido a las cuentas de administración.</p>
+        </section>
 
-<h2>6. Cuánto tiempo se conservan</h2>
-<p>Los mensajes y los datos de pedidos de prueba se conservan mientras duren las pruebas y, como máximo, durante 90 días después de su finalización, salvo que antes se solicite su supresión. Los registros técnicos del sistema no incluyen el contenido de los mensajes.</p>
+        <section id="eliminar-datos">
+          <h2>8. Tus derechos y cómo eliminar tus datos</h2>
+          <p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y, cuando proceda, portabilidad, y retirar tu consentimiento.</p>
+          <p><strong>Para eliminar tus datos</strong>, escribe a <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a> con el asunto «Eliminar mis datos» e indica el número de teléfono de WhatsApp que usaste. Se eliminarán los datos asociados y se confirmará por escrito en el plazo máximo de un mes.</p>
+          <p>También puedes presentar una reclamación ante la <a href="https://www.aepd.es/" rel="noopener noreferrer">Agencia Española de Protección de Datos</a>.</p>
+        </section>
 
-<h2>7. Seguridad</h2>
-<p>Se aplican medidas razonables para la fase de pruebas: conexiones cifradas, comprobación de que los avisos proceden realmente de Meta, claves guardadas como secretos y acceso restringido a las cuentas de administración.</p>
+        <section>
+          <h2>9. Menores</h2>
+          <p>Las pruebas están dirigidas exclusivamente a personas adultas.</p>
+        </section>
 
-<h2 id="eliminar-datos">8. Tus derechos y cómo eliminar tus datos</h2>
-<p>Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y, cuando proceda, portabilidad, y retirar tu consentimiento.</p>
-<p><strong>Para eliminar tus datos</strong>, escribe a <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a> con el asunto «Eliminar mis datos» e indica el número de teléfono de WhatsApp que usaste. Se eliminarán los datos asociados y se confirmará por escrito en el plazo máximo de un mes.</p>
-<p>También puedes presentar una reclamación ante la <a href="https://www.aepd.es/">Agencia Española de Protección de Datos</a>.</p>
+        <section>
+          <h2>10. Cambios en esta política y documentos relacionados</h2>
+          <p>Esta política puede actualizarse conforme evolucione el proyecto. Consulta también las <a href="/condiciones/">condiciones del servicio de SdeA Pedidos</a> y la <a href="/informacion-legal.html">información legal y privacidad</a> del sitio.</p>
+          <p class="updated"><strong>Última actualización:</strong> 22 de octubre de 2026.</p>
+        </section>
+        <a class="back-link" href="/index.html">← Volver a SdeA Soluciones</a>
+      </article>
+    </main>
 
-<h2>9. Menores</h2>
-<p>Las pruebas están dirigidas exclusivamente a personas adultas.</p>
-
-<h2>10. Cambios en esta política</h2>
-<p>Esta política puede actualizarse conforme evolucione el proyecto. La fecha de la última actualización figura al final de la página.</p>
-<p><strong>Última actualización:</strong> 22 de octubre de 2026.</p>
-</main>
-
-<footer class="pie">
-  <p><a href="https://www.sdeasoluciones.es/condiciones/">Condiciones del servicio de SdeA Pedidos</a> · <a href="https://www.sdeasoluciones.es/informacion-legal.html">Información legal y privacidad</a> · <a href="https://www.sdeasoluciones.es/index.html">Volver a SdeA Soluciones</a></p>
-  <p>Contacto: <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a><br>© 2025–2026 SdeA Soluciones</p>
-</footer>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-contact">
+          <strong>Contacto</strong><br />
+          <a href="mailto:desarrollo@sdeasoluciones.es">desarrollo@sdeasoluciones.es</a>
+        </div>
+        <div class="footer-copy">© 2025–2026 SdeA Soluciones</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
