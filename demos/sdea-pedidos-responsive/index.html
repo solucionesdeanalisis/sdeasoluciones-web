@@ -5,7 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <meta name="description" content="Simulación privada de demostración SdeA-Pedidos. Datos ficticios. Sin conexión con sistemas reales.">
-<title>SdeA-Pedidos · Tres pedidos de prueba</title>
+<title>SdeA-Pedidos · Demostración de tres pedidos</title>
+<!-- Identidad grafica original SdeA: favicon .ico para pestañas, PNG para alternativas y moviles. -->
+<link rel="icon" type="image/x-icon" href="./faviconsdea/favicon.ico?v=8">
+<link rel="icon" type="image/png" sizes="32x32" href="./faviconsdea/favicon-32x32.png?v=8">
+<link rel="icon" type="image/png" sizes="16x16" href="./faviconsdea/favicon-16x16.png?v=8">
+<link rel="apple-touch-icon" sizes="180x180" href="./faviconsdea/favicon-180x180.png?v=8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#15334a;--ink:#182a39;--muted:#53697a;--line:#dce5eb;--green:#0b8068;--mint:#e8f6f0;--bg:#f3f6f8;--amber:#f8e9c5;--blue:#e8f2fc;--shadow:0 12px 35px rgba(20,52,73,.09)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.48 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #f4a640;outline-offset:3px}a{color:#0a6680}header{background:#14344a;color:white;padding:19px max(18px,calc((100% - 1200px)/2)) 23px}header .brand{font-size:13px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:#a9d6d0}header h1{font-size:clamp(23px,3vw,33px);margin:7px 0 6px}header p{max-width:940px;color:#d7e8ec;margin:4px 0 0;font-size:14px}.shell{max-width:1200px;margin:auto;padding:22px 18px 50px}.notice{background:#fff8e8;border:1px solid #ead8aa;color:#614c17;border-radius:10px;padding:9px 13px;margin:0 0 18px;font-size:13px}.case-select{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 18px}.casebtn{text-align:left;background:white;border:2px solid #dbe5e9;border-radius:12px;padding:13px;min-height:105px;color:var(--ink)}.casebtn strong{display:block;margin-bottom:4px}.casebtn span{display:block;color:var(--muted);font-size:13px}.casebtn.selected{border-color:#087c6a;background:#effaf6;box-shadow:0 0 0 2px rgba(8,124,106,.08)}.headingrow{display:flex;align-items:start;justify-content:space-between;gap:14px;margin:14px 0}.headingrow h2{font-size:23px;margin:0 0 4px}.headingrow p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-flex;align-items:center;border-radius:50px;padding:5px 10px;font-size:12px;font-weight:800;background:#e9f2f7;color:#214963;white-space:nowrap}.tag.ok{background:#d6f2e2;color:#0b694b}.tag.wait{background:#fff0c8;color:#785007}.tag.review{background:#e7efff;color:#234f92}.toolbar{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:10px 0 18px}.switches{display:flex;gap:6px;background:#e5ecf0;border-radius:11px;padding:5px}.pill{border:0;border-radius:8px;background:transparent;padding:10px 14px;font-weight:750;color:#536778}.pill.on{color:#12364b;background:white;box-shadow:0 2px 6px #183b4b14}.secondary{background:white;color:#1c465a;border:1px solid #c8d7df;border-radius:8px;padding:9px 13px;font-weight:650}.primary{background:#0b8068;color:white;border:1px solid #0b8068;border-radius:8px;padding:10px 14px;font-weight:700}.primary:disabled{opacity:.5;cursor:not-allowed}.outline{background:transparent;color:#10705f;border:1px solid #80b5a8;border-radius:8px;padding:9px 13px;font-weight:700}.stage{display:grid;grid-template-columns:minmax(280px,390px) 1fr;gap:21px;align-items:start}.phone{margin:0 auto;background:#fff;border:9px solid #263d48;border-radius:29px;overflow:hidden;width:100%;max-width:365px;box-shadow:var(--shadow)}.phone-head{background:#e5eeeb;display:flex;gap:9px;align-items:center;padding:12px 12px;color:#172b2e}.avatar{background:#0a7c68;color:white;border-radius:50%;height:40px;width:40px;display:grid;place-items:center;font-size:13px;font-weight:900}.phonetitle{font-weight:750;font-size:14px}.phonesub{font-size:11px;color:#5f7272}.chat{height:455px;overflow-y:auto;padding:16px 11px;background:#e7e2d8;background-image:radial-gradient(#d7d0c3 1px, transparent 1px);background-size:21px 21px}.bubble{padding:10px 12px;border-radius:10px;max-width:88%;font-size:13px;margin:0 0 11px;white-space:pre-line;box-shadow:0 1px 2px #0001}.bubble.bot{background:white;margin-right:auto;border-top-left-radius:2px}.bubble.client{background:#d9f9df;margin-left:auto;border-top-right-radius:2px}.bubble.system{background:#fff6d5;max-width:96%;text-align:center;margin:auto auto 11px;font-size:12px}.tinytime{font-size:10px;color:#82908b;text-align:right}.typing{padding:12px;background:#f5f7f6;color:#81918c;font-size:13px}.pane{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);padding:21px}.pane h3{margin:0 0 10px;font-size:21px}.pane p{margin:8px 0;color:#385268}.steps{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 12px}.dot{width:31px;height:31px;border-radius:50%;border:1px solid #cbdbe2;background:white;color:#526c80;font-weight:700;font-size:12px}.dot.current{background:#0b8068;color:white;border-color:#0b8068}.dot.passed{background:#d2eee6;border-color:#98cfbd;color:#105a4a}.flex{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}.note{padding:12px;background:#f2f8fb;border-left:3px solid #77adc2;border-radius:5px;font-size:13px;color:#355466;margin-top:13px}.board{display:grid;grid-template-columns:235px 1fr;gap:17px}.boardnav{background:white;border:1px solid var(--line);border-radius:13px;padding:10px;align-self:start}.boardnav button{display:block;width:100%;padding:12px;text-align:left;border:0;background:white;border-radius:8px;color:#314d62;font-weight:650;margin-bottom:4px}.boardnav button.on{background:#eaf6f1;color:#057461}.boardbody{background:white;border:1px solid var(--line);border-radius:13px;padding:20px;min-height:410px}.boardbody h3{margin:0 0 7px;font-size:20px}.boardbody p{margin:7px 0 16px;color:var(--muted);font-size:14px}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.stat{padding:13px;background:#f1f6f9;border-radius:9px}.stat strong{font-size:21px;display:block}.stat span{font-size:12px;color:var(--muted)}table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0 20px}th,td{padding:11px 9px;border-bottom:1px solid #e3ebef;text-align:left;vertical-align:top}th{background:#f3f7fa;color:#405c6f;font-size:12px;font-weight:750}tr:last-child td{border-bottom:0}.tablewrap{overflow-x:auto}.clickrow{cursor:pointer}.clickrow:hover{background:#f3f9fa}.sideinfo{background:#f7fafb;border:1px solid #e0e9ed;padding:14px;border-radius:9px;margin:12px 0}.small{font-size:13px;color:var(--muted)}.key{font-weight:700;color:#223e50}.line{display:flex;justify-content:space-between;gap:14px;margin:7px 0}.line span:last-child{text-align:right}.checks{display:grid;gap:9px;margin:12px 0}.checks label{display:flex;align-items:center;gap:8px}.checks input{width:18px;height:18px}.checkrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}.checkrow select{padding:9px;border:1px solid #bfd1d9;border-radius:7px;font:inherit}.feedback{margin:12px 0;padding:12px 14px;border-radius:9px;background:#e8f6f0;border:1px solid #a9d9c8;color:#145c4b;font-weight:650}.feedback.error{background:#fff0ed;border-color:#f3b7ac;color:#873b2e}.bottom{font-size:13px;color:#647b89;margin:25px 0 0;text-align:center}.hidden{display:none!important}.pill2{font-size:12px;color:#3c6876;background:#f0f6f9;border-radius:30px;padding:5px 9px;display:inline-block}.case-summary{font-size:14px;padding:12px;background:#f1f8f5;border:1px solid #cde6dd;border-radius:10px;margin:14px 0}.link-input{display:flex;gap:7px;margin:9px 0;flex-wrap:wrap}.link-input input{flex:1;min-width:180px;background:#fff;padding:10px;border:1px solid #c8d7df;border-radius:7px;font:12px ui-monospace,monospace}.toast{position:fixed;bottom:15px;left:50%;transform:translateX(-50%);background:#12364a;color:white;padding:10px 16px;border-radius:11px;box-shadow:var(--shadow);z-index:5;font-size:13px}@media(max-width:870px){.stage,.board{grid-template-columns:1fr}.boardnav{display:flex;flex-wrap:wrap;gap:4px}.boardnav button{width:auto;flex:1 1 100px}.case-select{grid-template-columns:1fr}.casebtn{min-height:0}.headingrow{display:block}.headingrow .tag{margin-top:10px}.statgrid{grid-template-columns:1fr 1fr 1fr}}@media(max-width:500px){header{padding:20px 16px}.shell{padding:15px 11px 35px}.stage{gap:13px}.phone{max-width:345px}.pane,.boardbody{padding:15px}.pill{font-size:13px;padding:9px}.toolbar{gap:10px}th,td{font-size:12px;padding:9px 6px}.statgrid{gap:4px}.stat{padding:10px}.stat strong{font-size:17px}}
@@ -84,23 +92,376 @@
   .board{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}}
+
+/* V3: proceso completo sin alterar el diseño adaptable de la versión anterior. */
+.resetbuttons{display:flex;gap:7px;flex-wrap:wrap}
+.statgrid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.stat strong{font-size:19px}
+.control-field{margin:12px 0}
+.control-field label{display:block;font-weight:700;margin-bottom:6px;color:#25465a}
+.control-field input,.control-field select{width:100%;max-width:370px;min-height:44px;border:1px solid #a9c4d0;background:white;color:#1d3440;border-radius:8px;padding:9px;font:inherit}
+.actionrow{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:13px 0}
+.actionrow .secondary,.actionrow .outline,.actionrow .primary{min-height:44px}
+.delivery-input{width:75px;max-width:100%;border:1px solid #adc5d1;border-radius:6px;padding:7px 5px;font:inherit;text-align:center}
+.delivery-table th,.delivery-table td{font-size:12px}
+.flowbar{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 16px}
+.flowbar span{font-size:12px;border:1px solid #d9e4e9;padding:5px 9px;border-radius:20px;background:#f4f8fa;color:#4d697c}
+.flowbar span.current{background:#e4f6ed;border-color:#a7d8be;color:#116c4e;font-weight:800}
+.tag.no{background:#fce7e2;color:#8d392c}
+.info-warn{margin:12px 0;padding:11px 12px;border-left:4px solid #d38b3b;background:#fff8ed;border-radius:4px;color:#754b18;font-size:13px}
+.step-later{font-weight:800;letter-spacing:.02em;font-size:12px;color:#0c6c55;margin:13px 0 8px}
+.readout{padding:11px 12px;background:#f2f8fb;border-radius:8px;margin:12px 0;font-size:14px}
+.auditlist{margin:10px 0 14px;padding-left:18px;color:#435f6d;font-size:13px}
+.formerror{padding:10px 12px;background:#fff0ed;color:#9b3e31;border:1px solid #edb5a7;border-radius:8px;font-size:13px;margin:10px 0}
+.formhelp{font-size:12px!important;color:#687f8c!important}
+@media(max-width:700px){.statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.resetbuttons{width:100%}.resetbuttons button{flex:1}.delivery-table th,.delivery-table td{font-size:11px;padding:7px 5px}.delivery-input{width:55px}}
+
+/* Presentation options: the same simulated orders, two ways of viewing them */
+.modechooser{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:white;border:1px solid #d8e6eb;border-radius:15px;padding:15px 18px;margin-bottom:12px;box-shadow:0 3px 15px rgba(20,52,73,.035)}
+.modeinfo strong{font-size:16px}.modeinfo p{margin:2px 0 0;color:#566d7c;font-size:13px}
+.modechoices{display:flex;background:#e9f0f4;padding:4px;gap:4px;border-radius:11px}
+.modebtn{border:0;border-radius:8px;background:transparent;padding:11px 15px;color:#385366;font-weight:750;min-height:44px;white-space:nowrap}
+.modebtn.selected{background:#103e51;color:white;box-shadow:0 1px 4px #0002}
+.workspace{min-width:0}
+.compact-nav{display:none}
+/* Practical mode: left customer chat, right order manager */
+.mode-practica .workspace{display:grid;grid-template-columns:minmax(290px,370px) minmax(0,1fr);gap:17px;align-items:start}
+.mode-practica .stage{display:flex;flex-direction:column;gap:11px;min-width:0}
+.mode-practica .phone{width:100%;max-width:100%;border-width:6px;border-radius:23px}
+.mode-practica .chat{height:460px;max-height:52vh;min-height:280px}
+.mode-practica .pane{display:none!important}
+.mode-practica .compact-nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;width:100%;background:white;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.mode-practica .compact-nav strong{font-size:13px;color:#294a5d;white-space:nowrap}
+.mode-practica .compact-actions{display:flex;gap:7px}
+.mode-practica .compact-actions button{padding:8px 9px;font-size:12px;min-height:39px}
+.mode-practica .compact-actions button:disabled{opacity:.35;cursor:default}
+.mode-practica .board{display:block;min-width:0}
+.mode-practica .boardnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding:6px;margin-bottom:9px;position:static}
+.mode-practica .boardnav button{text-align:center;white-space:normal;min-width:0;min-height:43px;padding:8px 3px;font-size:12px;margin:0}
+.mode-practica .boardbody{min-height:520px;padding:17px}
+.mode-practica .boardbody h3{font-size:19px}
+.mode-practica .boardbody .audit-panel,.mode-practica .boardbody .guide-copy,.mode-practica .boardbody .formhelp,.mode-practica .boardbody>.note,.mode-practica .boardbody .flowbar{display:none!important}
+.mode-practica .boardbody .sideinfo{margin-top:9px;padding:12px}
+.mode-practica .boardbody .control-field{margin:9px 0}
+.mode-practica .boardbody .line{font-size:13px}
+.mode-practica .boardbody table{font-size:13px;margin:9px 0 12px}
+.mode-practica .boardbody th,.mode-practica .boardbody td{padding:8px 6px}
+.mode-practica .boardbody .info-warn{margin:7px 0;padding:9px 10px}
+.mode-practica .boardbody .readout{font-size:12px}
+.mode-practica .boardbody .actionrow{margin:9px 0}
+/* In the guided mode the original explanations remain available. */
+.mode-guiada .workspace{display:block}
+.mode-guiada .stage{display:grid}
+.mode-guiada .board{display:grid}
+.mode-guiada .compact-nav{display:none!important}
+@media(min-width:971px){.mode-practica .toolbar .switches{display:none}}
+@media(max-width:1100px) and (min-width:971px){.mode-practica .workspace{grid-template-columns:minmax(275px,34%) minmax(0,1fr)}.mode-practica .boardbody{padding:12px}.mode-practica .boardnav button{font-size:11px}}
+@media(max-width:970px){
+ .mode-practica .workspace{display:block}
+ .mode-practica .stage{width:100%}
+ .mode-practica .phone{max-width:440px;margin:0 auto}
+ .mode-practica .compact-nav{max-width:440px;margin:0 auto}
+ .mode-practica .boardbody{min-height:0}
+ .mode-practica .toolbar .switches{display:flex;width:100%}
+ .mode-practica .boardnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;overflow:visible;position:static}
+ .mode-practica .boardnav button{white-space:normal;min-width:0}
+}
+@media(max-width:700px){
+ .modechooser{padding:10px 11px;gap:8px}
+ .modeinfo{width:100%}
+ .modeinfo strong{font-size:14px}
+ .modeinfo p{font-size:12px}
+ .modechoices{width:100%;display:grid;grid-template-columns:1fr 1fr}
+ .modebtn{font-size:13px;padding:9px 5px}
+ .case-select{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:5px;padding:0}
+ .casebtn{min-width:0;min-height:51px;padding:8px 3px;text-align:center;border-width:1.5px;border-radius:9px}
+ .casebtn strong{font-size:11px;line-height:1.25}
+ .casebtn span{display:none}
+ .mode-practica .phone{border-width:5px}
+ .mode-practica .chat{height:43dvh;min-height:220px;max-height:380px}
+ .mode-practica .compact-nav{gap:6px;padding:8px 10px}
+ .mode-practica .compact-actions button{font-size:12px;padding:8px}
+ .mode-practica .boardbody{padding:12px}
+ .mode-practica .boardnav button{font-size:11px;padding:8px 2px;min-height:44px}
+ .mode-practica .toast{bottom:15px}
+ .mode-practica .shell{padding-bottom:30px}
+}
+@media(max-width:390px){.casebtn strong{font-size:10px}.compact-nav strong{font-size:12px}}
+
+/* Revisión 07/11: vista práctica sin explicaciones, WhatsApp primero en móvil. */
+.casebtn .example-prefix{display:block;font-size:10px;font-weight:650;letter-spacing:.01em;color:#667d8c;margin-bottom:1px}
+.example-desc{display:block;color:#647d89;font-size:12px}
+.order-ref{font-size:11px;font-weight:500;color:#607887;white-space:nowrap}
+.modechooser{padding:8px 11px;margin-bottom:8px;border-radius:9px;gap:9px;box-shadow:none}
+.modeinfo{font-size:12px;line-height:1.35;color:#536778;flex:1 1 250px}
+.modeinfo strong{font-size:12px;color:#2e5265}
+.modechoices{padding:2px;border-radius:8px}
+.modebtn{padding:6px 11px;min-height:32px;font-size:12px;border-radius:6px}
+.notice{font-size:11px;line-height:1.35;padding:5px 9px;margin-bottom:9px;border-color:#dce5e9;background:#f6f8f9;color:#5c7280}
+.case-select{gap:7px;margin-bottom:9px}
+.casebtn{padding:7px 9px;min-height:57px;border-width:1px;border-radius:9px}
+.casebtn strong{font-size:13px;margin:0;line-height:1.2}
+.resetbuttons{gap:5px}
+.resetbuttons button{padding:4px 8px;font-size:10px;font-weight:550;border-color:#d6e1e6;color:#657988;line-height:1.25}
+.mode-practica header{padding-top:10px;padding-bottom:11px}
+.mode-practica header .brand{font-size:11px;letter-spacing:.06em}
+.mode-practica header h1{font-size:23px;margin:3px 0 2px}
+.mode-practica header p{font-size:12px;line-height:1.35}
+.mode-practica header p:last-child{display:none}
+.mode-practica .shell{padding-top:10px}
+.mode-practica .headingrow{display:none}
+.mode-practica .toolbar{justify-content:flex-end;margin:0 0 7px}
+.mode-practica .toolbar .switches{display:none!important}
+.mode-practica .casebtn{min-height:49px;text-align:center}
+.mode-practica .casebtn .example-desc{display:none}
+.mode-practica .phone{border-width:5px}
+.mode-practica .mobile-step-heading{display:none!important}
+.mode-practica .step-later,.mode-practica .bottom{display:none!important}
+.mode-practica .boardbody .guide-copy,.mode-practica .boardbody .formhelp,.mode-practica .boardbody .note,.mode-practica .boardbody .audit-panel,.mode-practica .boardbody .flowbar{display:none!important}
+.mode-practica .boardbody .formhelp,.mode-practica .boardbody .readout{display:none!important}
+.mode-practica .boardbody h3{font-size:17px}
+.mode-practica .boardbody .tag{padding:4px 6px;font-size:11px}
+.mode-practica .boardbody .actionrow button{min-height:36px;font-size:12px;padding:6px 10px}
+.mode-practica .boardbody .control-field input,.mode-practica .boardbody .control-field select{min-height:36px;padding:6px;font-size:13px}
+.mode-practica .boardbody .control-field label{font-size:13px}
+.mode-practica .boardbody .info-warn{font-size:12px}
+.mode-practica .boardbody>.note{display:none}
+.mode-practica .compact-nav{padding:6px 8px;border-color:#e2e9ed;box-shadow:none}
+.mode-practica .compact-nav strong{font-size:12px;font-weight:600}
+.mode-practica .compact-actions button{min-height:30px;padding:5px 9px;font-size:11px;font-weight:600}
+.mode-practica .compact-actions .primary{background:#edf5f2;color:#196b59;border-color:#c7e1d7}
+.mode-practica .workspace{scroll-margin-top:9px}
+@media(max-width:970px){
+ .mode-practica .workspace{display:flex;flex-direction:column;gap:13px}
+ .mode-practica #frontArea,.mode-practica #backArea{display:flex;flex-direction:column;width:100%;scroll-margin-top:8px}
+ .mode-practica .phone{width:100%;max-width:440px}
+ .mode-practica .boardnav{max-width:100%}
+ .mode-practica .toolbar{margin-bottom:6px}
+ .mode-practica .compact-nav{width:100%;max-width:440px}
+ .mode-practica .boardbody{min-height:0}
+}
+@media(max-width:700px){
+ .modechooser{padding:7px 9px;gap:6px}
+ .modeinfo{font-size:11px}
+ .modeinfo strong{font-size:11px}
+ .modechoices{display:flex;width:auto;min-width:0}
+ .modebtn{font-size:11px;padding:5px 9px;min-height:29px}
+ .notice{font-size:10.5px;padding:5px 7px;margin:0 0 7px}
+ .case-select{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:0 0 7px}
+ .casebtn{padding:5px 2px;min-height:43px;border-width:1px}
+ .casebtn strong{font-size:12px;line-height:1.1}
+ .example-prefix{font-size:9px;line-height:1.2}
+ .casebtn .example-desc{display:none}
+ .mode-practica .shell{padding:9px 9px 30px}
+ .mode-practica header{padding:8px 12px 9px}
+ .mode-practica header h1{font-size:21px}
+ .mode-practica header p{font-size:11px}
+ .mode-practica .toolbar{margin:0 0 6px}
+ .mode-practica .resetbuttons button{font-size:9px;padding:3px 6px}
+ .mode-practica .workspace{gap:13px}
+ .mode-practica .stage{gap:7px}
+ .mode-practica .chat{height:36dvh;min-height:225px;max-height:340px}
+ .mode-practica .compact-nav{margin-top:0}
+ .mode-practica .boardnav{margin-bottom:5px}
+ .mode-practica .boardnav button{font-size:11px;min-height:36px;padding:6px 1px}
+ .mode-practica .boardbody{padding:12px}
+}
+@media(max-width:370px){.casebtn strong{font-size:11px}.modeinfo{font-size:10.5px}}
+
+/* Cabecera corporativa reproducida del HTML de SdeA-ANÁLISIS. */
+.site-head{background:#fff;color:#182a39;padding:17px max(18px,calc((100% - 1200px)/2)) 15px;border-bottom:1px solid #e4e9ed}
+.site-head .brandline{display:flex;align-items:center;gap:13px}
+.site-head .sdea-mark{width:56px;height:56px;flex:none;border-radius:50%;background:#f97316;color:#fff;display:grid;place-items:center;font-family:'Cookie',cursive;font-size:28px;font-weight:400;letter-spacing:0;line-height:1}
+.site-head .sdea-name{font-family:'Cookie',cursive;font-size:20px;font-weight:400;color:#374151;line-height:1;letter-spacing:0;text-transform:none}
+.site-head h1{font-size:clamp(22px,3vw,30px);font-weight:750;color:#1f2937;font-style:italic;line-height:1.24;margin:9px 0 7px}
+.site-head .subtitle{color:#4b5563;margin:0;font-size:14px;line-height:1.45;max-width:none}
+.site-head .company-name{display:block;font-weight:800;color:#2b4353;margin-top:3px}
+.site-head .subtitle strong{color:inherit}
+@media(min-width:768px){.site-head .sdea-name{font-size:24px}}
+@media(min-width:1024px){.site-head .sdea-name{font-size:30px}}
+/* Los cinco botones de ejemplos/reinicio están agrupados a continuación de las vistas. */
+.demo-pickers{display:flex;align-items:stretch;gap:8px;margin:0 0 8px}
+.demo-pickers .case-select{flex:1 1 auto;min-width:0;margin:0}
+.demo-pickers .resetbuttons{display:flex;align-items:stretch;flex:none;gap:5px}
+.demo-pickers .resetbuttons button{white-space:nowrap;font-size:11px;padding:6px 9px;line-height:1.2}
+.modechooser{background:#fff;border-color:#dce5eb}
+.screen-switches{margin:2px 0 7px}
+.mode-practica .screen-switches{display:none!important}
+.mode-guiada .screen-switches{display:flex}
+.notice{margin:6px 0 11px}
+.surface-heading{font-size:15px;font-weight:800;color:#24394a;line-height:1.35;margin:2px 0 9px}
+.mode-practica .surface-heading{margin:0 0 8px}
+/* El interior del backoffice parece una página web, con barra superior y cabecera propia. */
+.board{display:block;min-width:0}
+.web-frame{min-width:0;overflow:hidden;background:#fff;border:1px solid #cbd7df;border-radius:13px;box-shadow:var(--shadow)}
+.browser-top{display:flex;align-items:center;gap:9px;background:#eef1f3;border-bottom:1px solid #d8e0e5;padding:7px 12px;color:#5c6d7a;font-size:11px;min-height:31px}
+.browser-dots{display:flex;align-items:center;gap:5px}
+.browser-dots i{width:8px;height:8px;border-radius:50%;background:#c4cfd5}
+.browser-dots i:first-child{background:#e9aaa3}.browser-dots i:nth-child(2){background:#e9ca8a}.browser-dots i:nth-child(3){background:#9fcab3}
+.browser-label{background:#fff;border:1px solid #e3e9ec;border-radius:5px;padding:3px 9px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.web-apphead{padding:14px 17px;background:#fff;border-bottom:2px solid #e0e9ed;color:#20384c;font-size:clamp(13px,1.65vw,17px);font-weight:800}
+.web-content{min-width:0;padding:10px;display:grid;grid-template-columns:minmax(160px,210px) minmax(0,1fr);gap:12px;align-items:start;background:#f4f7f9}
+.web-content .boardnav{margin:0}
+.web-content .boardbody{min-height:370px}
+/* En la Vista práctica, la navegación de Gestión de pedidos ocupa una fila, como una web real. */
+.mode-practica .web-content{display:block;padding:9px}
+.mode-practica .web-content .boardnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:0 0 8px}
+.mode-practica .web-content .boardbody{min-height:390px}
+.mode-guiada .web-content .boardnav{display:block}
+.mode-guiada .web-content .boardnav button{display:block;width:100%}
+/* La fila completa es pulsable; también su botón Revisar. */
+.clickrow:hover,.clickrow:focus-visible{background:#eaf6f1}
+.open-order{background:#eaf6f1;border:1px solid #b8ded2;color:#075e4e;border-radius:7px;padding:6px 9px;font-size:12px;font-weight:700;min-height:31px}
+.open-order:hover{background:#d7eee5}
+.clickrow:focus-visible{outline:3px solid #f4a640;outline-offset:-3px}
+.empty-inbox{border:1px dashed #cbdce3;background:#f8fafb;border-radius:10px;padding:17px;color:#4e6778;font-size:13px;margin:12px 0}
+/* Adecuación de ordenador y móvil, manteniendo WhatsApp antes de Gestión de pedidos. */
+@media(max-width:970px){
+ .demo-pickers{display:block}
+ .demo-pickers .case-select{margin:0 0 6px}
+ .demo-pickers .resetbuttons{justify-content:flex-end}
+ .web-content{display:block}
+ .web-content .boardnav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin-bottom:7px}
+ .mode-guiada .web-content .boardnav{display:grid}
+ .mode-guiada .web-content .boardnav button{min-width:0;padding:7px 3px;text-align:center;font-size:12px}
+ .web-content .boardbody{min-height:260px}
+}
+@media(max-width:700px){
+ .site-head{padding:12px 13px 11px}
+ .site-head .brandline{gap:10px}
+ .site-head .sdea-mark{width:46px;height:46px;font-size:24px}
+ .site-head .sdea-name{font-size:20px}
+ .site-head h1{font-size:23px;margin:8px 0 5px}
+ .site-head .subtitle{font-size:12px;line-height:1.4}
+ .site-head .company-name{margin-top:3px;font-size:12px}
+ .demo-pickers .casebtn{min-height:42px}
+ .demo-pickers .resetbuttons button{font-size:10px;padding:5px 8px}
+ .notice{margin:5px 0 10px}
+ .surface-heading{font-size:14px;margin:3px 0 7px}
+ .browser-top{padding:5px 8px}
+ .web-apphead{padding:11px;font-size:13px;line-height:1.35}
+ .web-content{padding:6px}
+ .web-content .boardnav button{font-size:11px}
+ .web-content .boardbody{padding:10px;min-height:220px}
+ .mode-practica .web-content .boardbody{min-height:220px}
+ .empty-inbox{padding:12px}
+}
+
+/* La única línea de subtítulo sigue visible en Vista práctica y Vista guiada.
+   El diseño original tenía la regla que ocultaba el último párrafo de la cabecera. */
+body.mode-practica .site-head .subtitle,body.mode-guiada .site-head .subtitle{display:block!important;color:#4b5563}
+body.mode-practica .site-head .company-name,body.mode-guiada .site-head .company-name{display:block!important}
+body.mode-practica .site-head,body.mode-guiada .site-head{background:#fff;color:#182a39;border-bottom:1px solid #e4e9ed}
+body.mode-practica .site-head h1,body.mode-guiada .site-head h1{font-style:italic;color:#1f2937;font-size:clamp(22px,3vw,30px);margin:9px 0 7px}
+body.mode-guiada #backArea{display:block}
+body.mode-guiada #backArea.hidden{display:none!important}
+body.mode-guiada .web-content{display:grid;grid-template-columns:minmax(160px,210px) minmax(0,1fr)}
+@media(max-width:970px){body.mode-guiada .web-content{display:block}}
+@media(max-width:700px){
+ body.mode-practica .site-head,body.mode-guiada .site-head{padding:12px 13px 11px}
+ body.mode-practica .site-head h1,body.mode-guiada .site-head h1{font-size:23px;margin:8px 0 5px}
+ body.mode-practica .site-head .subtitle,body.mode-guiada .site-head .subtitle{font-size:12px;line-height:1.4}
+}
+
+/* 5 pestañas: incorporar Clientes sin perder Productos. */
+.mode-practica .web-content .boardnav, .mode-guiada .web-content .boardnav{grid-template-columns:repeat(5,minmax(0,1fr));}
+.mode-practica .web-content .boardnav button{min-width:0;font-size:11px;overflow-wrap:anywhere;}
+#clientForm .control-field{margin:12px 0}
+#clientForm .control-field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+#clientForm input,#clientForm select,#clientForm textarea{width:100%;max-width:540px;min-height:38px;border:1px solid #a9c4d0;border-radius:8px;padding:9px;font:inherit;background:white;color:#1d3440}
+#clientForm textarea{min-height:74px;resize:vertical}
+.client-notes{background:#eff7f5;border:1px solid #d3e8df;border-radius:8px;padding:10px;margin-top:12px;font-size:13px}
+@media(min-width:971px){.mode-guiada .web-content .boardnav{display:block;}}
+@media(max-width:700px){.mode-practica .web-content .boardnav button,.mode-guiada .web-content .boardnav button{font-size:10px;padding:8px 2px;}}
+
+/* Revisión 7: en móvil, cada pedido es un botón completo, no una fila de tabla.
+   Esto evita toques perdidos dentro de tablas con desplazamiento horizontal. */
+.mobile-order-list{display:none}
+@media(max-width:700px){
+ .order-table-wrap{display:none}
+ .mobile-order-list{display:grid;gap:7px;margin:10px 0 15px}
+ .mobile-order-card{display:flex;gap:10px;align-items:center;justify-content:space-between;width:100%;min-height:68px;padding:11px 12px;border-radius:9px;border:1px solid #b9d8cf;background:#fff;color:#20384c;text-align:left;touch-action:manipulation;-webkit-tap-highlight-color:rgba(8,124,106,.13)}
+ .mobile-order-card:active{background:#e3f5ed}
+ .mobile-order-card:focus-visible{outline:3px solid #f4a640;outline-offset:2px}
+ .mobile-order-data{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+ .mobile-order-data>strong{font-size:14px}
+ .mobile-order-client{font-size:12px;color:#405b6b;white-space:normal;overflow-wrap:anywhere}
+ .mobile-order-meta{font-size:11px;color:#5b727e}
+ .mobile-order-cta{flex:none;border-radius:7px;color:#08735e;background:#e7f4ee;padding:8px 9px;font-size:12px;font-weight:750}
+}
+
+/* REVISION 8: aspecto de bandeja profesional, manteniendo toda la fila como UN boton tactil. */
+@media(max-width:700px){
+ .mobile-order-list{gap:10px;margin:12px 0 16px}
+ .mobile-order-card{
+   display:grid;grid-template-columns:minmax(0,1fr) auto;gap:9px;
+   position:relative;min-height:84px;padding:12px 11px 12px 13px;
+   border:1px solid #d4e2e8;border-left:4px solid #d7b160;
+   border-radius:12px;color:#1c3446;text-align:left;
+   background:linear-gradient(110deg,#fbfcfe 0%,#fff 70%);
+   box-shadow:0 3px 10px rgba(22,55,72,.07);cursor:pointer;
+   touch-action:manipulation;-webkit-tap-highlight-color:rgba(11,128,104,.15);
+   transition:border-color .12s ease,box-shadow .12s ease,background .12s ease;
+ }
+ .mobile-order-card[data-status="aceptado"]{border-left-color:#3b82c4}
+ .mobile-order-card[data-status="entregado"]{border-left-color:#20a273}
+ .mobile-order-card[data-status="rechazado"]{border-left-color:#ca665e}
+ .mobile-order-card:active{background:#eaf7f1;box-shadow:inset 0 0 0 1px #6bbca2}
+ .mobile-order-card:focus-visible{outline:3px solid #efab3b;outline-offset:2px}
+ .mobile-order-data{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
+ .mobile-order-first{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 9px}
+ .mobile-order-first strong{font-size:15px;line-height:1.2;color:#16344a}
+ .mobile-order-ref{font-size:11px;color:#687f8f}
+ .mobile-order-client{font-size:12px;color:#3c5969;line-height:1.35;overflow-wrap:anywhere}
+ .mobile-order-details{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+ .mobile-order-status{font-size:10px;line-height:1.3;font-weight:750;padding:3px 7px;border-radius:15px;background:#fff2d4;color:#7d5411}
+ .mobile-order-status.review{background:#e6efff;color:#20538c}
+ .mobile-order-status.ok{background:#dcf6e9;color:#096b4b}
+ .mobile-order-status.no{background:#fbe7e5;color:#9a4540}
+ .mobile-order-date{font-size:11px;color:#5a7080}
+ .mobile-order-cta{display:flex;align-items:center;gap:4px;justify-content:center;white-space:nowrap;
+   color:#06745d;background:#e6f5ee;border:1px solid #b9decd;border-radius:7px;
+   font-weight:800;font-size:11px;padding:9px 9px;min-height:34px}
+ .mobile-order-card:active .mobile-order-cta{background:#ccecdc}
+}
+@media(max-width:360px){.mobile-order-card{padding:10px 8px}.mobile-order-cta{font-size:10px;padding:7px}}
 </style>
 </head>
-<body>
-<header><div class="brand">SdeA Soluciones</div><h1>SdeA-Pedidos</h1><p>Propuesta de atención por WhatsApp y gestión web para <strong>Transporte y Logística GLP Sevilla, S.L.</strong></p> <p>Tres ejemplos de pedidos ficticios - 3 de noviembre de 2026.</p></header>
+<body class="mode-practica">
+<header class="site-head">
+  <div class="brandline" aria-label="SdeA Soluciones">
+    <div class="sdea-mark" aria-hidden="true">SdeA</div><span class="sdea-name">Soluciones</span>
+  </div>
+  <h1>SdeA - Pedidos</h1>
+  <p class="subtitle">Demo de atención al cliente por WhatsApp y gestión de pedidos por web para
+    <strong class="company-name">Transporte y Logística GLP Sevilla, S.L.</strong>
+  </p>
+</header>
 <main class="shell">
-<div class="notice"><strong>DEMOSTRACIÓN INTERACTIVA.</strong> No es WhatsApp real ni está conectada a bases de datos o clientes. Todos los nombres y direcciones de clientes son ficticios.<p>Las acciones realizadas aquí no envían ni guardan pedidos.</p></div>
-<div class="case-select" aria-label="Seleccionar pedido de demostración">
-<button class="casebtn" id="btn2001" onclick="choose('2001')"><strong>Pedido 2001 · Gasolinera</strong><span>8 butano (recambio) + 3 propano (recambio) <br>Pedido entregado</span></button>
-<button class="casebtn" id="btn2002" onclick="choose('2002')"><strong>Pedido 2002 · Bar</strong><span>2 propano (recambio) + 1 propano (casco nuevo) + estufa<br>Nuevo contrato solicitado (bombona propano nueva), por confirmar. <br>Pedido entregado</span></button>
-<button class="casebtn" id="btn2003" onclick="choose('2003')"><strong>Pedido 2003 · Particular</strong><span>1 camping gas<br>Pedido solicitado, pendiente de aceptar y entregar</span></button>
+<section class="modechooser" aria-label="Elegir cómo ver la simulación">
+ <div class="modeinfo"><strong>Cómo probar:</strong> <span>Práctica, sin explicaciones · Guiada, explica cada paso.</span></div>
+ <div class="modechoices" role="group" aria-label="Modo de visualización">
+ <button type="button" id="practicalMode" class="modebtn selected" aria-pressed="true" onclick="setMode('practica')">Vista práctica</button>
+ <button type="button" id="guidedMode" class="modebtn" aria-pressed="false" onclick="setMode('guiada')">Vista guiada</button>
+ </div>
+</section>
+<div class="demo-pickers" aria-label="Elegir ejemplo o reiniciar">
+ <div class="case-select" aria-label="Seleccionar pedido de demostración">
+  <button class="casebtn" id="btn2001" type="button" aria-pressed="true" onclick="choose('2001')"><span class="example-prefix">Ejemplo · pedido</span><strong>Gasolinera</strong><span class="example-desc">8 de butano y 3 de propano por recambio</span></button>
+  <button class="casebtn" id="btn2002" type="button" aria-pressed="false" onclick="choose('2002')"><span class="example-prefix">Ejemplo · pedido</span><strong>Bar</strong><span class="example-desc">2 recambios de propano, 1 envase nuevo y 1 estufa</span></button>
+  <button class="casebtn" id="btn2003" type="button" aria-pressed="false" onclick="choose('2003')"><span class="example-prefix">Ejemplo · pedido</span><strong>Particular</strong><span class="example-desc">1 recambio de camping gas</span></button>
+ </div>
+ <div class="resetbuttons"><button class="secondary" onclick="resetCurrent()" title="Reiniciar solamente el pedido actual">Reiniciar pedido</button><button class="secondary" onclick="resetAll()" title="Reiniciar todos los pedidos">Reiniciar todo</button></div>
 </div>
 <div class="headingrow"><div><h2 id="caseTitle"></h2><p id="caseSubtitle"></p></div><span id="caseStatus" class="tag"></span></div>
-<div class="toolbar"><div class="switches"><button id="frontTab" class="pill on" onclick="showArea('front')">Vista cliente · WhatsApp</button><button id="backTab" class="pill" onclick="showArea('back')">Vista Emilio · Web</button></div><button class="secondary" onclick="resetDemo()">Reiniciar ejemplo</button></div>
-<section id="frontArea" class="stage">
-<div class="phone" aria-label="Representación de una conversación de WhatsApp"><div class="phone-head"><div class="avatar">GLP</div><div><div class="phonetitle">Transporte y Logística GLP Sevilla</div><div class="phonesub">Atención de pedidos · simulación</div></div></div><div id="mobileStepHeading" class="mobile-step-heading" aria-live="polite"></div><div id="chat" class="chat" aria-live="polite"></div><div class="typing">Mensaje… <span style="float:right">＋　◉</span></div></div>
-<div class="pane"><span class="pill2">Atención al cliente en Whatsapp (FrontOffice)  · 8 momentos de la conversación</span><h3 id="stepTitle" style="margin-top:14px"></h3><p id="stepInfo"></p><div id="stepDots" class="steps" aria-label="Recorrido de la conversación"></div><div class="flex"><button class="secondary" id="prevStep" onclick="moveStep(-1)">← Anterior</button><button class="primary" id="nextStep" onclick="moveStep(1)">Siguiente mensaje →</button><button class="outline" onclick="showArea('back')">Ver Gestión de pedidos de Emilio (BackOffice) </button></div><div class="case-summary" id="frontSummary"></div><div class="note">En el sistema definitivo se pretende priorizar el mensaje libre <br>También se puede dirigir la conversacion utilizando formularios en los que el cliente elige opciones, si así se desea. <br>Esta secuencia muestra los datos necesarios sin obligar al cliente a pasar por formularios. <br>La conversación y las confirmaciones son meramente ilustrativas.</div></div>
-</section>
+<div class="toolbar screen-switches"><div class="switches" aria-label="Elegir pantalla"><button id="frontTab" class="pill on" onclick="showArea('front')">WhatsApp</button><button id="backTab" class="pill" onclick="showArea('back')">Gestión de pedidos</button></div></div>
+<div class="notice">Datos ficticios. Al recargar la página o pulsar un botón de reinicio, la demo empieza de nuevo.</div>
+<div class="workspace" id="workspace">
+<section id="frontArea"><h2 class="surface-heading">Lo que ve el cliente:</h2><div class="stage">
+<div class="phone" aria-label="Conversación de WhatsApp simulada"><div class="phone-head"><div class="avatar">GLP</div><div><div class="phonetitle">Transporte y Logística GLP Sevilla</div><div class="phonesub">Atención de pedidos · simulación</div></div></div><div id="mobileStepHeading" class="mobile-step-heading" aria-live="polite"></div><div id="chat" class="chat" aria-live="polite"></div><div class="typing">Mensaje… <span style="float:right">＋　◉</span></div></div>
+<div class="compact-nav" aria-label="Recorrer la conversación"><strong><span id="compactStep">1 de 8</span></strong><div class="compact-actions"><button type="button" class="secondary" id="compactPrev" onclick="moveStep(-1)">← Anterior</button><button type="button" class="primary" id="compactNext" onclick="moveStep(1)">Siguiente →</button></div></div>
+<div class="pane"><span class="pill2">WhatsApp · 8 pasos de la conversación</span><h3 id="stepTitle" style="margin-top:14px"></h3><p id="stepInfo"></p><div id="stepDots" class="steps" aria-label="Recorrido de la conversación"></div><div class="flex"><button class="secondary" id="prevStep" onclick="moveStep(-1)">← Anterior</button><button class="primary" id="nextStep" onclick="moveStep(1)">Siguiente mensaje →</button><button class="outline" onclick="showArea('back')">Ir a Gestión de pedidos </button></div><div class="case-summary" id="frontSummary"></div><div class="note">Esta conversación muestra cómo el cliente puede hacer su pedido con mensajes normales. Los ocho pasos terminan con una <strong>solicitud recibida</strong>. Después, la empresa revisa y decide si puede atenderla. Si la acepta, aparece aquí un nuevo mensaje con la fecha prevista.</div></div>
+</div></section>
 <nav id="mobileStepbar" class="mobile-stepbar" aria-label="Pasos de la conversación">
   <button id="mobilePrevStep" class="mobile-nav-button" onclick="moveStep(-1)">← Anterior</button>
   <label class="mobile-step-select-wrap">
@@ -111,64 +472,250 @@
   </label>
   <button id="mobileNextStep" class="mobile-nav-button next" onclick="moveStep(1)">Siguiente →</button>
 </nav>
-<section id="backArea" class="board hidden"><div class="boardnav"><button id="bb1" onclick="showBoard('b1')">B1 · Bandeja</button><button id="bb2" onclick="showBoard('b2')">B2 · Ficha y aceptación</button><button id="bb3" onclick="showBoard('b3')">B3 · Entrega y envases</button><button id="bb4" onclick="showBoard('b4')">B4 · Catálogo y ajustes</button></div><div class="boardbody" id="boardContent" aria-live="polite"></div></section>
-<p class="bottom">SdeA Soluciones · Prototipo de presentación, sin valor contractual ni efectos operativos · 03/11/2026</p>
+<section id="backArea" class="board hidden">
+ <h2 class="surface-heading">Lo que ve la empresa:</h2>
+ <div class="web-frame" aria-label="Página web simulada de gestión de pedidos">
+  <div class="browser-top" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-label">Gestión de pedidos · página web simulada</span></div>
+  <div class="web-apphead">Transporte y Logística GLP Sevilla - Bandeja de Pedidos</div>
+  <div class="web-content">
+   <div class="boardnav" aria-label="Opciones de gestión"><button id="bb1" onclick="showBoard('b1')">Pedidos</button><button id="bb2" onclick="showBoard('b2')">Revisar</button><button id="bb3" onclick="showBoard('b3')">Entrega</button><button id="bb4" onclick="showBoard('b4')">Clientes</button><button id="bb5" onclick="showBoard('b5')">Productos</button></div>
+   <div class="boardbody" id="boardContent" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+</div>
+<p class="bottom">SdeA Soluciones · Demostración ficticia. Sin conexiones, pedidos, envíos, cobros ni contratos reales.</p>
 </main><div id="toast" class="toast hidden" role="status"></div>
 <script>
 'use strict';
+// Datos y acciones ficticios. Este archivo no utiliza conexiones de red ni almacenamiento.
 const cases={
-'2001':{id:2001,client:'Gasolinera Ejemplo (FICTICIA)',short:'Gasolinera',segment:'Gasolinera',address:'Avenida Inventada 10, Sevilla',initial:'entregado',datetime:'01/11/2026 · 11:00 (dato de prueba)',items:[{n:'Bombona de butano por recambio',q:8},{n:'Bombona de propano por recambio',q:3}],moves:[{type:'Butano',full:8,empty:8,new:0,contract:false},{type:'Propano',full:3,empty:3,new:0,contract:false}],source:'WhatsApp directo (supuesto de la simulación)',chat:[
-{title:'Paso 1 · Primer contacto',info:'El cliente puede escribir su pedido normalmente.',from:'bot',msg:'Hola, gracias por escribir a Transporte y Logística GLP Sevilla. Cogemos el teléfono de 8am a 2pm lunes a viernes. En otros horarios, puedes pedir por aquí   ¿En qué podemos ayudarte?'},
-{title:'Paso 2 · Productos',info:'El sistema identifica los productos y cantidades y pide aclaraciones solo si hacen falta.',from:'client',msg:'Buenos días. Necesitamos 8 bombonas de butano y 3 de propano para la gasolinera.'},
-{title:'Paso 3 · Dirección',info:'El cliente confirma el lugar de entrega.',from:'bot',msg:'Ya conocemos tu teléfono ¿La entrega sería en Avenida Inventada 10, Sevilla?'},
-{title:'Paso 4 · Envases',info:'El sistema pregunta por los cascos vacíos previstos; el registro real se hará al entregar.',from:'client',msg:'Sí, es esa dirección. Tenemos preparados 8 cascos vacíos de butano y 3 de propano.'},
-{title:'Paso 5 · Fecha preferida',info:'La fecha es una preferencia hasta que Emilio confirme el pedido.',from:'bot',msg:'Perfecto. ¿Para cuándo necesitáis la entrega?'},
-{title:'Paso 6 · Resumen',info:'Se presenta un resumen antes de registrar una solicitud.',from:'bot',msg:'RESUMEN\n8 bombonas de butano (recambio)\n3 de propano (recambio)\nDirección: Avenida Inventada 10\nNo has indicado un día de entrega, entonces será a la mayor brevedad que podamos (normalmente de lunes a viernes de 8am a 2pm) ¿Son correctos los datos?'},
-{title:'Paso 7 · Confirmación del cliente',info:'Confirmar los datos crea una solicitud, no una aceptación automática del pedido.',from:'client',msg:'Sí, los datos son correctos. Gracias.'},
-{title:'Paso 8 · Resolución ilustrativa',info:'En esta simulación mostramos cómo podría avisarse tras la validación humana. En la prueba el pedido figura como entregado.',from:'bot',msg:'OK, Solicitud recibida. Te confirmaremos la entrega en breve. ¡Gracias!'}]},
-'2002':{id:2002,client:'Bar La Prueba (FICTICIO)',short:'Bar',segment:'Hostelería',address:'Calle Simulada 4, Sevilla',initial:'entregado',datetime:'01/11/2026 · 12:00 (dato de prueba)',items:[{n:'Bombona de propano por recambio',q:2},{n:'Casco nuevo de propano con bombona llena',q:1},{n:'Estufa tipo seta',q:1}],moves:[{type:'Propano',full:3,empty:2,new:1,contract:true}],source:'WhatsApp directo (supuesto de la simulación)',chat:[
-{title:'Paso 1 · Primer contacto',info:'La empresa recibe el mensaje del establecimiento.',from:'bot',msg:'Bienvenido a Transporte y Logística GLP Sevilla. Dinos qué necesitas.'},
-{title:'Paso 2 · Productos',info:'Un pedido puede combinar recargas, un casco nuevo y una estufa.',from:'client',msg:'Para el bar queremos 2 bombonas de propano de recambio, otra con casco nuevo y una estufa tipo seta.'},
-{title:'Paso 3 · Dirección',info:'La dirección se confirma antes de enviar el resumen.',from:'bot',msg:'¿Confirmas la entrega en Calle Simulada 4, Sevilla?'},
-{title:'Paso 4 · Envases y contrato',info:'La petición de casco nuevo requiere comprobación humana del contrato; un mensaje no equivale a firma.',from:'bot',msg:'Anotamos que entregaríais 2 cascos vacíos de propano y que solicitáis 1 casco nuevo con bombona llena. La documentación del alta la comprobará el equipo.'},
-{title:'Paso 5 · Fecha preferida',info:'El cliente puede indicar su preferencia; no se promete disponibilidad automáticamente.',from:'client',msg:'Correcto, esa es la dirección. Nos vendría bien recibirlo cuanto antes.'},
-{title:'Paso 6 · Resumen',info:'El cliente comprueba todos los conceptos antes de registrar la solicitud.',from:'bot',msg:'RESUMEN\n2 recargas de propano\n1 casco nuevo con bombona llena de propano\n1 estufa tipo seta\n2 cascos vacíos a recoger\nAlta sujeta a verificación\n¿Está todo correcto?'},
-{title:'Paso 7 · Confirmación del cliente',info:'Tras la confirmación se envía la solicitud a Emilio.',from:'client',msg:'Sí. Está correcto.'},
-{title:'Paso 8 · Revisión humana',info:'La base local registra una entrega completa y contrato verificado; el mecanismo real de comprobación está pendiente de definir con Emilio.',from:'bot',msg:'Recibido. Nuestro equipo comprobará el alta del nuevo envase y confirmará las condiciones. Gracias.'}]},
-'2003':{id:2003,client:'Particular de Prueba (FICTICIO)',short:'Particular',segment:'Particular',address:'Plaza Imaginaria 2, Sevilla',initial:'solicitado',datetime:'Sin entrega registrada',items:[{n:'Camping gas por recambio',q:1}],moves:[],source:'WhatsApp directo (supuesto de la simulación)',chat:[
-{title:'Paso 1 · Inicio',info:'El cliente escribe de forma libre.',from:'client',msg:'Hola, necesito una bombona de camping gas.'},
-{title:'Paso 2 · Identificación del producto',info:'El sistema interpreta la solicitud y solicita aclaración si resulta necesario.',from:'bot',msg:'¿Quieres una bombona de camping gas por recambio, entregando el envase vacío?'},
-{title:'Paso 3 · Dirección',info:'Se comprueba el punto de entrega.',from:'client',msg:'Sí, por recambio. La dirección es Plaza Imaginaria 2, Sevilla.'},
-{title:'Paso 4 · Envases',info:'La devolución de un casco vacío es una previsión ilustrativa.',from:'bot',msg:'Perfecto. Anotamos 1 recarga de camping gas. Confirmaremos el envase a recoger cuando se tramite la entrega.'},
-{title:'Paso 5 · Fecha',info:'El cliente expresa una preferencia; no constituye confirmación de reparto.',from:'client',msg:'Cuando sea posible, por favor.'},
-{title:'Paso 6 · Resumen',info:'El resumen se valida antes de registrar una solicitud.',from:'bot',msg:'RESUMEN\n1 camping gas por recambio\nPlaza Imaginaria 2, Sevilla\nEntrega pendiente de confirmar\n¿Son correctos los datos?'},
-{title:'Paso 7 · Confirmación del cliente',info:'La confirmación crea una solicitud pendiente de aceptación por Emilio.',from:'client',msg:'Sí, confirmo los datos.'},
-{title:'Paso 8 · Solicitud registrada',info:'En esta prueba, este pedido está solicitado y no tiene aún movimientos de envases registrados.',from:'bot',msg:'Solicitud recibida. Está pendiente de revisión por el equipo. Te confirmaremos si podemos atenderla. ¡Gracias!'}]}
+'2001':{
+ id:2001,client:'Gasolinera Ejemplo (FICTICIA)',short:'Gasolinera',segment:'Gasolinera',address:'Avenida Inventada 10, Sevilla',source:'WhatsApp directo (supuesto de la simulación)',
+ items:[{code:'BUT-REC',n:'Bombona de butano por recambio',q:8},{code:'PRO-REC',n:'Bombona de propano por recambio',q:3}],
+ moves:[{type:'Butano',full:8,empty:8,newCount:0},{type:'Propano',full:3,empty:3,newCount:0}],
+ chat:[
+ {title:'Paso 1 · Primer contacto',info:'El cliente puede escribir su pedido normalmente.',from:'bot',msg:'Hola, gracias por escribir a Transporte y Logística GLP Sevilla. ¿En qué podemos ayudarte?'},
+ {title:'Paso 2 · Productos',info:'El cliente indica qué necesita y en qué cantidades.',from:'client',msg:'Buenos días. Necesitamos 8 bombonas de butano y 3 de propano para la gasolinera.'},
+ {title:'Paso 3 · Dirección',info:'Se comprueba la dirección de entrega.',from:'bot',msg:'¿La entrega sería en Avenida Inventada 10, Sevilla?'},
+ {title:'Paso 4 · Envases',info:'El cliente indica los envases vacíos que tiene preparados.',from:'client',msg:'Sí, esa dirección. Tenemos 8 cascos vacíos de butano y 3 de propano.'},
+ {title:'Paso 5 · Fecha preferida',info:'Se pregunta al cliente cuándo necesita el pedido.',from:'bot',msg:'Gracias. ¿Para cuándo necesitáis la entrega?'},
+ {title:'Paso 6 · Resumen',info:'El cliente expresa su preferencia y comprueba el resumen.',from:'bot',before:'En cuanto podáis, por favor.',msg:'RESUMEN\n8 bombonas de butano por recambio\n3 bombonas de propano por recambio\n8 cascos vacíos de butano y 3 de propano\nDirección: Avenida Inventada 10, Sevilla\nFecha preferida: lo antes posible\n¿Son correctos los datos?'},
+ {title:'Paso 7 · Confirmación del cliente',info:'El cliente confirma la información. La empresa aún no ha aceptado el pedido.',from:'client',msg:'Sí, los datos son correctos. Gracias.'},
+ {title:'Paso 8 · Solicitud recibida',info:'El cliente recibe el aviso de recepción. Ahora corresponde a la empresa revisar, aceptar o rechazar y señalar una fecha prevista.',from:'bot',msg:'Hemos recibido tu solicitud. La revisaremos y te confirmaremos si podemos atenderla y la fecha prevista de entrega. ¡Gracias!'}
+ ]
+},
+'2002':{
+ id:2002,client:'Bar La Prueba (FICTICIO)',short:'Bar',segment:'Hostelería',address:'Calle Simulada 4, Sevilla',source:'WhatsApp directo (supuesto de la simulación)',
+ items:[{code:'PRO-REC',n:'Bombona de propano por recambio',q:2},{code:'PRO-ALTA',n:'Casco nuevo de propano con bombona llena',q:1},{code:'EST-SETA',n:'Estufa tipo seta',q:1}],
+ moves:[{type:'Propano',full:3,empty:2,newCount:1}],
+ chat:[
+ {title:'Paso 1 · Primer contacto',info:'El bar inicia la solicitud.',from:'bot',msg:'Bienvenido a Transporte y Logística GLP Sevilla. Dinos qué necesitas.'},
+ {title:'Paso 2 · Productos',info:'Se pueden pedir recambios, un casco nuevo y una estufa en la misma solicitud.',from:'client',msg:'Para el bar queremos 2 bombonas de propano de recambio, otra con casco nuevo y una estufa tipo seta.'},
+ {title:'Paso 3 · Dirección',info:'Se comprueba dónde habría que realizar la entrega.',from:'bot',msg:'¿Confirmas la entrega en Calle Simulada 4, Sevilla?'},
+ {title:'Paso 4 · Envases y alta',info:'El alta del casco nuevo quedará pendiente de revisión por la empresa.',from:'bot',msg:'Anotamos 2 cascos vacíos de propano para recoger y 1 casco nuevo con bombona llena. La empresa deberá comprobar las condiciones del alta del nuevo envase.'},
+ {title:'Paso 5 · Fecha preferida',info:'El cliente expresa su preferencia, sin que exista todavía una fecha confirmada.',from:'client',msg:'Correcto, esa es la dirección. Nos vendría bien recibirlo cuanto antes.'},
+ {title:'Paso 6 · Resumen',info:'Se incluyen todos los productos y la devolución de envases.',from:'bot',msg:'RESUMEN\n2 recambios de propano\n1 casco nuevo de propano con bombona llena\n1 estufa tipo seta\n2 cascos vacíos a recoger\nAlta del nuevo envase pendiente de comprobación\n¿Está todo correcto?'},
+ {title:'Paso 7 · Confirmación del cliente',info:'El cliente confirma los datos, pero no queda aprobado el nuevo envase.',from:'client',msg:'Sí. Está correcto.'},
+ {title:'Paso 8 · Solicitud recibida',info:'La solicitud está pendiente de revisión. La empresa deberá comprobar el alta antes de aceptarla y comunicar la fecha prevista.',from:'bot',msg:'Recibido. Revisaremos el pedido y comprobaremos el alta del nuevo envase antes de confirmarte la entrega. Gracias.'}
+ ]
+},
+'2003':{
+ id:2003,client:'Particular de Prueba (FICTICIO)',short:'Particular',segment:'Particular',address:'Plaza Imaginaria 2, Sevilla',source:'WhatsApp directo (supuesto de la simulación)',
+ items:[{code:'CAM-REC',n:'Camping gas por recambio',q:1}],
+ moves:[{type:'Camping gas',full:1,empty:1,newCount:0}],
+ chat:[
+ {title:'Paso 1 · Primer contacto',info:'El cliente escribe libremente.',from:'client',msg:'Hola, necesito una bombona de camping gas.'},
+ {title:'Paso 2 · Producto',info:'Se aclara que se trata de un recambio.',from:'bot',msg:'¿Quieres una bombona de camping gas por recambio, entregando el envase vacío?'},
+ {title:'Paso 3 · Dirección',info:'El cliente confirma el producto y el lugar de entrega.',from:'client',msg:'Sí, por recambio. La dirección es Plaza Imaginaria 2, Sevilla.'},
+ {title:'Paso 4 · Envases',info:'En este ejemplo está previsto recoger un casco vacío.',from:'bot',msg:'Perfecto. Anotamos una bombona llena de camping gas por recambio y un envase vacío para recoger.'},
+ {title:'Paso 5 · Fecha preferida',info:'El cliente indica cuándo le vendría bien recibirlo.',from:'client',msg:'Cuando sea posible, por favor.'},
+ {title:'Paso 6 · Resumen',info:'Se presenta el resumen de la solicitud.',from:'bot',msg:'RESUMEN\n1 camping gas por recambio\n1 casco vacío previsto para recoger\nDirección: Plaza Imaginaria 2, Sevilla\nEntrega pendiente de confirmar\n¿Son correctos los datos?'},
+ {title:'Paso 7 · Confirmación del cliente',info:'Se confirman los datos, no la aceptación del pedido.',from:'client',msg:'Sí, confirmo los datos.'},
+ {title:'Paso 8 · Solicitud recibida',info:'Queda pendiente de la revisión de la empresa y de la comunicación de una fecha prevista.',from:'bot',msg:'Solicitud recibida. Está pendiente de revisión. Te confirmaremos si podemos atenderla. ¡Gracias!'}
+ ]
+}
 };
 const catalog=[['BUT-REC','Butano por recambio'],['PRO-REC','Propano por recambio'],['CAM-REC','Camping gas por recambio'],['BUT-ALTA','Casco nuevo de butano, lleno'],['PRO-ALTA','Casco nuevo de propano, lleno'],['CAM-ALTA','Casco nuevo de camping gas, lleno'],['EST-SETA','Estufa tipo seta'],['EST-PIRA','Estufa tipo pirámide'],['EST-CILI','Estufa tipo cilíndrica'],['EST-DECO','Estufa decorativa']];
-let id='2001',step=0,area='front',board='b1',simulation={};
-function escapeHTML(t){return String(t).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
-function current(){return cases[id]};function sim(){return simulation[id]||{status:current().initial}};
-function statusText(s){return s==='entregado'?'Entregado':s==='aceptado'?'Aceptado · pendiente de entrega':'Solicitado · pendiente de aceptación'};
-function showToast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.remove('hidden');setTimeout(()=>e.classList.add('hidden'),2600)}
-function choose(next){if(!cases[next])return;id=next;step=0;board=area==='back'?'b2':'b1';const u=new URL(location.href);u.searchParams.set('pedido',id);history.replaceState(null,'',u);render();focusMobileArea(area==='front'?'frontArea':'backArea');}
-function showArea(which,scroll=true){area=which;document.getElementById('frontArea').classList.toggle('hidden',which!=='front');document.getElementById('backArea').classList.toggle('hidden',which!=='back');document.getElementById('mobileStepbar').classList.toggle('hidden',which!=='front');document.getElementById('frontTab').classList.toggle('on',which==='front');document.getElementById('backTab').classList.toggle('on',which==='back');if(which==='back')renderBoard();if(scroll)focusMobileArea(which==='front'?'frontArea':'backArea');}
-function resetDemo(){simulation={};step=0;board='b1';render();showToast('Simulación reiniciada; ningún dato real se ha modificado')}
-function moveStep(d){step=Math.max(0,Math.min(7,step+d));renderFront();focusMobileArea('frontArea')}
-function jumpStep(s){step=Math.max(0,Math.min(7,s));renderFront();focusMobileArea('frontArea')}
-function render(){for(const key of Object.keys(cases))document.getElementById('btn'+key).classList.toggle('selected',key===id);document.getElementById('caseTitle').textContent='Pedido '+id+' · '+current().short;document.getElementById('caseSubtitle').textContent=current().client+' · '+current().address;const st=document.getElementById('caseStatus');st.textContent=statusText(sim().status);st.className='tag '+(sim().status==='entregado'?'ok':sim().status==='aceptado'?'review':'wait');document.title='Pedido '+id+' · SdeA-Pedidos · Demo';renderFront();renderBoard()}
-function renderFront(){const c=current();document.getElementById('mobileStepHeading').textContent=c.chat[step].title;document.getElementById('mobileStepSelect').value=String(step);document.getElementById('mobilePrevStep').disabled=step===0;document.getElementById('mobileNextStep').disabled=step===7;const elem=document.getElementById('chat');elem.innerHTML='<div class="bubble system">DEMO · conversación ficticia · pedido '+id+'</div>'+c.chat.slice(0,step+1).map((m,i)=>'<div class="bubble '+(m.from==='client'?'client':'bot')+'">'+escapeHTML(m.msg)+'<div class="tinytime">'+String(9+Math.floor(i/4)).padStart(2,'0')+':'+String(6+i*3).padStart(2,'0')+'</div></div>').join('');elem.scrollTop=elem.scrollHeight;document.getElementById('stepTitle').textContent=c.chat[step].title;document.getElementById('stepInfo').textContent=c.chat[step].info;document.getElementById('stepDots').innerHTML=c.chat.map((_,i)=>'<button class="dot '+(i===step?'current':i<step?'passed':'')+'" aria-label="Paso '+(i+1)+'" title="'+escapeHTML(c.chat[i].title)+'" onclick="jumpStep('+i+')">'+(i+1)+'</button>').join('');document.getElementById('prevStep').disabled=step===0;document.getElementById('nextStep').disabled=step===7;document.getElementById('frontSummary').innerHTML='<strong>Productos de la prueba</strong><div style="margin-top:6px">'+c.items.map(x=>escapeHTML(x.q+' × '+x.n)).join('<br>')+'</div><div class="small" style="margin-top:8px">Estado en la prueba original: '+(c.initial==='entregado'?'Entregado':'Solicitado')+'</div>'}
-function showBoard(b){board=b;renderBoard();focusMobileArea('backArea')}
-function renderBoard(){for(const b of ['b1','b2','b3','b4'])document.getElementById('b'+b).classList.toggle('on',b===board);const e=document.getElementById('boardContent');if(board==='b1')e.innerHTML=boardB1();if(board==='b2')e.innerHTML=boardB2();if(board==='b3')e.innerHTML=boardB3();if(board==='b4')e.innerHTML=boardB4()}
-function boardB1(){return '<h3>Bandeja de pedidos</h3><p></p><div class="statgrid"><div class="stat"><strong>3</strong><span>pedidos de ejemplo</span></div><div class="stat"><strong>'+Object.keys(cases).filter(k=>(simulation[k]?.status||cases[k].initial)==='entregado').length+'</strong><span>entregados en la demo</span></div><div class="stat"><strong>'+Object.keys(cases).filter(k=>(simulation[k]?.status||cases[k].initial)!=='entregado').length+'</strong><span>Pedido hecho, pendiente de confirmar</span></div></div><div class="tablewrap"><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Situación</th></tr></thead><tbody>'+Object.keys(cases).map(k=>'<tr class="clickrow" onclick="choose(\''+k+'\');showBoard(\'b2\')" '+(k===id?'style="background:#eef8f5"':'')+'><td><strong>#'+k+'</strong></td><td>'+escapeHTML(cases[k].client)+'</td><td>'+statusText(simulation[k]?.status||cases[k].initial)+'</td></tr>').join('')+'</tbody></table></div><div class="note">Emilio vería aquí los pedidos, tanto los que ya se han entregado como los pendientes de confirmar o de entregar. <br>Pulse cualquier fila para consultar su ficha.</div>'}
-function boardB2(){const c=current(),s=sim(),pending=s.status==='solicitado';return '<h3>Ficha del pedido #'+id+'</h3><p>Todo reunido en un único lugar, para no buscar datos entre mensajes.</p><div class="line"><span class="key">Cliente</span><span>'+escapeHTML(c.client)+'</span></div><div class="line"><span class="key">Dirección</span><span>'+escapeHTML(c.address)+'</span></div><div class="line"><span class="key">Origen</span><span>'+escapeHTML(c.source)+'</span></div><div class="line"><span class="key">Estado de ejemplo</span><span><strong>'+statusText(s.status)+'</strong></span></div><div class="tablewrap"><table><thead><tr><th>Producto</th><th>Cant.</th></tr></thead><tbody>'+c.items.map(x=>'<tr><td>'+escapeHTML(x.n)+'</td><td>'+x.q+'</td></tr>').join('')+'</tbody></table></div>'+ (pending?'<div class="sideinfo"><strong>Decisión pendiente de Emilio</strong><p>La confirmación de los datos por el cliente no implica que el pedido esté aceptado.</p><button class="primary" onclick="acceptPending()">Aceptar pedido (solo demo)</button><button class="secondary" style="margin:6px" onclick="showToast(\'Rechazo no guardado: simulación visual\')">Probar rechazo visual</button></div>': s.status==='aceptado'?'<div class="feedback">Aceptación simulada. Ahora se puede abrir B3 y registrar una entrega de ejemplo.</div>':'<div class="feedback">Este pedido está aceptado y entregado.<br> La aceptación no está almacenada como un evento en el ejemplo.</div>')+'<button class="outline" onclick="showBoard(\'b3\')">Ir a B3 · Entrega y envases →</button>'}
-function boardB3(){const c=current(),s=sim();if(c.initial==='entregado')return '<h3>Entrega y envases · #'+id+'</h3><p>En esta demo sólo se consultan datos de pedidos entregados, no se modifican.</p><div class="tablewrap"><table><thead><tr><th>Envase</th><th>Llenos entregados</th><th>Vacíos recogidos</th><th>Cascos nuevos</th></tr></thead><tbody>'+c.moves.map(x=>'<tr><td>'+escapeHTML(x.type)+'</td><td>'+x.full+'</td><td>'+x.empty+'</td><td>'+x.new+'</td></tr>').join('')+'</tbody></table></div>'+(id==='2002'?'<div class="feedback">En la prueba consta el contrato como comprobado para el alta de 1 casco nuevo de propano. El modo real de verificarlo deberá acordarse con Emilio.</div>':'<div class="feedback">recambio completo y conciliación de envases “OK” en la prueba.</div>')+'<div class="small">'+escapeHTML(c.datetime)+' · No hay cobros, facturas ni asignación de repartidores en esta simulación.</div>';
-const isPending=s.status==='solicitado',done=s.status==='entregado';return '<h3>Entrega y envases · #2003</h3><p>La base de prueba original no tiene ningún movimiento de este pedido. Aquí podemos ensayar el cierre sin guardar nada.</p><div class="sideinfo"><div class="line"><span class="key">Producto</span><span>1 camping gas por recambio</span></div><div class="line"><span class="key">Situación</span><span>'+statusText(s.status)+'</span></div></div>'+(done?'<div class="feedback">Entrega registrada solamente en esta demostración. 1 lleno de camping gas; '+s.empty+' vacío(s) recogido(s).</div>':isPending?'<div class="note">Primero debes aceptar el pedido en la ficha B2. La aplicación real deberá exigir ese paso antes de registrar una entrega.</div><button class="primary" onclick="showBoard(\'b2\')">Ir a B2 para aceptarlo</button>':'<div class="sideinfo"><strong>Registrar la entrega completa (prueba visual)</strong><div class="checkrow"><label for="emptyCount">Vacíos realmente recogidos:</label><select id="emptyCount"><option value="">Selecciona</option><option value="0">0</option><option value="1">1</option></select></div><div class="checks"><label><input id="ackDelivery" type="checkbox"> He comprobado que se ha entregado 1 bombona llena de camping gas.</label></div><button class="primary" onclick="recordDelivery()">Registrar entrega (solo demo)</button><div id="entryFeedback" class="small" style="margin-top:12px"></div></div>')}
-function boardB4(){return '<h3>Catálogo y ajustes · referencia</h3><p>Diez productos de la prueba. Más adelante Emilio podrá revisar qué referencias utiliza realmente.</p><div class="tablewrap"><table><thead><tr><th>Código</th><th>Producto</th></tr></thead><tbody>'+catalog.map(x=>'<tr><td>'+x[0]+'</td><td>'+escapeHTML(x[1])+'</td></tr>').join('')+'</tbody></table></div><div class="note">Esta pantalla está pensada para permitir modificar los productos, los precios vigentes, las franjas de reparto y repartidores, etc. <br>En esta simulación, sólo aparece la tabla de productos, y no se permite editar esta lista.</div>'}
-function acceptPending(){if(id==='2003'&&sim().status==='solicitado'){simulation[id]={status:'aceptado'};render();showBoard('b2');showToast('Aceptación simulada; no se guarda en la base de datos')}}
-function recordDelivery(){if(id!=='2003'||sim().status!=='aceptado')return;const empty=document.getElementById('emptyCount').value,checked=document.getElementById('ackDelivery').checked;if(empty===''||!checked){document.getElementById('entryFeedback').innerHTML='<span style="color:#a0442c">Selecciona los cascos vacíos reales y confirma la entrega del lleno.</span>';return}simulation[id]={status:'entregado',empty:Number(empty)};render();showBoard('b3');showToast('Registro ilustrativo realizado; la base de datos permanece intacta')}
-function focusMobileArea(target){if(!window.matchMedia('(max-width:700px), (max-width:1100px) and (orientation:landscape) and (max-height:600px)').matches)return;requestAnimationFrame(()=>{const e=document.getElementById(target);if(e)e.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});});}
-const requested=new URLSearchParams(location.search).get('pedido')||'2001';if(cases[requested])id=requested;render();showArea('front',false);
+let id='2001',step=0,area='front',board='b1',mode='practica';
+// Pequeña agenda de clientes de la simulación, separada de los pedidos.
+// No existe almacenamiento real; se pierde todo al recargar el HTML.
+const initialCases=Object.fromEntries(Object.keys(cases).map(k=>[k,{client:cases[k].client,address:cases[k].address}]));
+function initialClients(){return Object.fromEntries(Object.keys(cases).map(k=>[k,{
+ key:k,name:initialCases[k].client,address:initialCases[k].address,segment:cases[k].segment,notes:''
+}]))}
+let clients=initialClients(),clientScreen='list',selectedClient='2001',nextClientKey=4;
+const simulation=Object.fromEntries(Object.keys(cases).map(k=>[k,{status:'solicitado',received:false,events:[]}])) ;
+function escapeHTML(v){return String(v).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
+function current(){return cases[id]}
+function sim(){return simulation[id]}
+function statusText(status){return ({solicitado:'Solicitud pendiente de revisar',aceptado:'Aceptado · pendiente de entrega',entregado:'Entregado',rechazado:'Solicitud rechazada'})[status]||'Sin estado'}
+function statusClass(status){return ({solicitado:'wait',aceptado:'review',entregado:'ok',rechazado:'no'})[status]||'wait'}
+function todayISO(){const d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+function displayDate(v){if(!/^\d{4}-\d{2}-\d{2}$/.test(v||''))return '';return new Intl.DateTimeFormat('es-ES',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(v+'T12:00:00Z'))}
+function showToast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.remove('hidden');clearTimeout(showToast.handle);showToast.handle=setTimeout(()=>e.classList.add('hidden'),3200)}
+function choose(next){if(!cases[next])return;id=next;step=0;board='b1';area='front';const url=new URL(location.href);url.searchParams.set('pedido',id);history.replaceState(null,'',url);render();updatePanels(false);if(mode==='practica'&&window.matchMedia('(max-width:970px)').matches){document.getElementById('frontArea').scrollIntoView({behavior:'smooth',block:'start'})}}
+function updatePanels(scroll=false){
+ const narrow=window.matchMedia('(max-width:970px)').matches;
+ const both=mode==='practica';
+ document.getElementById('frontArea').classList.toggle('hidden',!both&&area!=='front');
+ document.getElementById('backArea').classList.toggle('hidden',!both&&area!=='back');
+ document.getElementById('mobileStepbar').classList.toggle('hidden',mode!=='guiada'||area!=='front');
+ document.getElementById('frontTab').classList.toggle('on',area==='front');
+ document.getElementById('backTab').classList.toggle('on',area==='back');
+ document.getElementById('frontTab').setAttribute('aria-pressed',String(area==='front'));
+ document.getElementById('backTab').setAttribute('aria-pressed',String(area==='back'));
+ if(scroll&&mode==='practica'){document.getElementById(area==='front'?'frontArea':'backArea').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});}
+ if(scroll&&mode==='guiada')focusMobileArea(area==='front'?'frontArea':'backArea');
+}
+function showArea(which,scroll=true){area=which;if(which==='back')renderBoard();updatePanels(scroll)}
+function setMode(value){
+ mode=value==='guiada'?'guiada':'practica';
+ document.body.classList.toggle('mode-practica',mode==='practica');
+ document.body.classList.toggle('mode-guiada',mode==='guiada');
+ for(const [name,button] of [['practica','practicalMode'],['guiada','guidedMode']]){
+  const el=document.getElementById(button);el.classList.toggle('selected',name===mode);el.setAttribute('aria-pressed',String(name===mode));
+ }
+ renderFront();
+  updatePanels(false);
+}
+window.addEventListener('resize',()=>updatePanels(false));
+function resetCurrent(){simulation[id]={status:'solicitado',received:false,events:[]};step=0;board='b1';render();showToast('Se ha reiniciado el pedido '+id)}
+function resetAll(){for(const k of Object.keys(cases)){
+ simulation[k]={status:'solicitado',received:false,events:[]};
+ cases[k].client=initialCases[k].client;cases[k].address=initialCases[k].address;
+}clients=initialClients();clientScreen='list';selectedClient='2001';nextClientKey=4;step=0;board='b1';render();showToast('Se han reiniciado los pedidos y las fichas de clientes')}
+function moveStep(d){step=Math.max(0,Math.min(7,step+d));renderFront();renderBoard();focusMobileArea('frontArea')}
+function jumpStep(n){step=Math.max(0,Math.min(7,n));renderFront();renderBoard();focusMobileArea('frontArea')}
+function render(){for(const key of Object.keys(cases)){document.getElementById('btn'+key).classList.toggle('selected',key===id);document.getElementById('btn'+key).setAttribute('aria-pressed',String(key===id));}document.getElementById('caseTitle').textContent='Pedido de '+current().short.toLowerCase();document.getElementById('caseSubtitle').textContent=current().client+' · '+current().address;const st=document.getElementById('caseStatus');st.textContent=statusText(sim().status);st.className='tag '+statusClass(sim().status);document.title='SdeA-Pedidos · '+current().short;renderFront();renderBoard()}
+function messageBubble(m,i){const time=String(9+Math.floor(i/4)).padStart(2,'0')+':'+String((6+i*3)%60).padStart(2,'0');return '<div class="bubble '+(m.from==='client'?'client':'bot')+'">'+escapeHTML(String(m.msg).split(initialCases[id].address).join(current().address))+'<div class="tinytime">'+time+'</div></div>'}
+function renderFront(){const c=current(),s=sim(),last=step===7;if(last&&!s.received){s.received=true;s.events.push('Solicitud recibida del cliente');}document.getElementById('mobileStepHeading').textContent=c.chat[step].title;document.getElementById('mobileStepSelect').value=String(step);document.getElementById('mobilePrevStep').disabled=step===0;document.getElementById('mobileNextStep').disabled=last;const messages=[];c.chat.slice(0,step+1).forEach(m=>{if(m.before)messages.push({from:'client',msg:m.before});messages.push(m)});let more='';if(last){if(s.status==='aceptado'||s.status==='entregado'){more='<div class="step-later">Mensaje después de revisar el pedido</div>'+messageBubble({from:'bot',msg:'Hemos revisado tu solicitud y podemos atenderla. Tu pedido ha sido aceptado.\nEntrega prevista: '+displayDate(s.date)+'.'+(id==='2002'?'\nHemos comprobado el alta del envase nuevo.':'')+'\n¡Gracias!'},messages.length)}else if(s.status==='rechazado'){more='<div class="step-later">Mensaje después de revisar el pedido</div>'+messageBubble({from:'bot',msg:'Hemos revisado tu solicitud, pero en esta ocasión no podemos atenderla. Motivo: '+s.reason+'. Puedes ponerte en contacto con nosotros para cualquier aclaración.'},messages.length)}}const chat=document.getElementById('chat');chat.innerHTML=(mode==='guiada'?'<div class="bubble system">Conversación ficticia · ejemplo de '+escapeHTML(c.short.toLowerCase())+'</div>':'')+messages.map(messageBubble).join('')+more;chat.scrollTop=chat.scrollHeight;document.getElementById('stepTitle').textContent=c.chat[step].title;document.getElementById('stepInfo').textContent=c.chat[step].info;document.getElementById('stepDots').innerHTML=c.chat.map((m,i)=>'<button class="dot '+(i===step?'current':i<step?'passed':'')+'" aria-label="Paso '+(i+1)+'" title="'+escapeHTML(m.title)+'" onclick="jumpStep('+i+')">'+(i+1)+'</button>').join('');document.getElementById('prevStep').disabled=step===0;document.getElementById('nextStep').disabled=last;let hint=last?'<div class="readout"><strong>¿Qué sucede después?</strong> '+(s.status==='solicitado'?'La empresa debe revisar y decidir sobre la solicitud.':'Puedes consultar la decisión de la empresa en «Revisar» y el registro de entrega en «Entrega».')+'</div>':'';document.getElementById('frontSummary').innerHTML='<strong>Productos solicitados</strong><div style="margin-top:6px">'+c.items.map(x=>escapeHTML(x.q+' × '+x.n)).join('<br>')+'</div><div class="small" style="margin-top:8px">Situación ahora: '+statusText(s.status)+'</div>'+hint;document.getElementById('compactStep').textContent=(step+1)+' de 8';document.getElementById('compactPrev').disabled=step===0;document.getElementById('compactNext').disabled=step===7}
+function openInboxOrder(key){
+ if(!cases[key]||!simulation[key].received)return;
+ id=key;step=7;board='b2';area='back';
+ const url=new URL(location.href);url.searchParams.set('pedido',id);history.replaceState(null,'',url);
+ render();updatePanels(false);
+ // En móvil, desplazar la pantalla a la cabecera de Gestión de pedidos.
+ // Evita que una actualización dinámica de la tabla deje la revisión fuera de la vista.
+ requestAnimationFrame(()=>{
+   const back=document.getElementById('backArea');
+   const target=document.getElementById('boardContent');
+   if(back)back.scrollIntoView({behavior:'auto',block:'start'});
+   if(target){target.setAttribute('tabindex','-1');target.focus({preventScroll:true});}
+ });
+}
+// La fila tiene una acción directa; el botón Revisar ejecuta la misma función.
+// Al volver a dibujar la tabla la acción sigue estando presente.
+function showBoard(b){board=b;renderBoard();if(mode==='guiada')focusMobileArea('backArea')}
+function renderBoard(){for(const b of ['b1','b2','b3','b4','b5'])document.getElementById('b'+b).classList.toggle('on',b===board);const container=document.getElementById('boardContent');container.innerHTML=board==='b1'?boardB1():board==='b2'?boardB2():board==='b3'?boardB3():board==='b4'?boardB4():boardB5()}
+function flowBar(status){const labels=['Solicitud recibida','Revisión y decisión','Entrega completa'];const idx=status==='solicitado'?0:status==='aceptado'?1:status==='entregado'?2:1;return '<div class="flowbar">'+labels.map((x,i)=>'<span class="'+(i===idx?'current':'')+'">'+(i+1)+'. '+x+'</span>').join('')+'</div>'}
+function boardB1(){
+ const keys=Object.keys(cases).filter(k=>simulation[k].received),
+ n=(status)=>keys.filter(k=>simulation[k].status===status).length;
+ const rows=keys.map(k=>'<tr class="clickrow" data-order-id="'+k+'" tabindex="0" role="button" aria-label="Abrir '+escapeHTML(cases[k].short)+' (pedido '+k+')" title="Pulsa para revisar el pedido" onclick="openInboxOrder(&quot;'+k+'&quot;)" onkeydown="if(event.key===&quot;Enter&quot;||event.key===&quot; &quot;){event.preventDefault();openInboxOrder(&quot;'+k+'&quot;)}">'
+ +'<td><span class="order-ref">(pedido '+k+')</span></td>'
+ +'<td>'+escapeHTML(cases[k].client)+'</td>'
+ +'<td><span class="tag '+statusClass(simulation[k].status)+'">'+statusText(simulation[k].status)+'</span></td>'
+ +'<td>'+(simulation[k].date?escapeHTML(displayDate(simulation[k].date)):'—')+'</td>'
+ +'<td><button class="open-order" type="button" aria-label="Revisar pedido '+k+'" onclick="event.stopPropagation();openInboxOrder(&quot;'+k+'&quot;)">Revisar</button></td></tr>').join('');
+ return '<h3>Bandeja de pedidos</h3>'
+ +'<p class="guide-copy">La solicitud aparece aquí cuando el cliente termina el paso 8 de WhatsApp. Pulsa su fila o «Revisar» para abrirla.</p>'
+ +'<div class="statgrid"><div class="stat"><strong>'+n('solicitado')+'</strong><span>Por revisar</span></div><div class="stat"><strong>'+n('aceptado')+'</strong><span>Aceptados</span></div><div class="stat"><strong>'+n('entregado')+'</strong><span>Entregados</span></div><div class="stat"><strong>'+n('rechazado')+'</strong><span>Rechazados</span></div></div>'
+ +(keys.length?'<div class="tablewrap order-table-wrap"><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Estado</th><th>Fecha prevista</th><th></th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+ +'<div class="mobile-order-list" aria-label="Pedidos recibidos: pulsa para revisar">'
+ +keys.map(k=>'<button class="mobile-order-card" data-status="'+escapeHTML(simulation[k].status)+'" type="button" onclick="openInboxOrder(\''+k+'\')" aria-label="Revisar '+escapeHTML(cases[k].short)+' (pedido '+k+')">'
+ +'<span class="mobile-order-data">'
+ +'<span class="mobile-order-first"><strong>'+escapeHTML(cases[k].short)+'</strong><span class="mobile-order-ref">(pedido '+k+')</span></span>'
+ +'<span class="mobile-order-client">'+escapeHTML(cases[k].client)+'</span>'
+ +'<span class="mobile-order-details"><span class="mobile-order-status '+statusClass(simulation[k].status)+'">'+statusText(simulation[k].status)+'</span>'+(simulation[k].date?'<span class="mobile-order-date">Prevista: '+escapeHTML(displayDate(simulation[k].date))+'</span>':'')+'</span>'
+ +'</span><span class="mobile-order-cta">Revisar <span aria-hidden="true">→</span></span></button>').join('')
+ +'</div>':'<div class="empty-inbox">Todavía no hay solicitudes recibidas. Cuando el cliente complete el paso 8 de WhatsApp, aparecerá su pedido aquí.</div>')
+ +'<div class="note">Pulsa una fila o el botón «Revisar» para abrir los detalles del pedido.</div>';
+}
+function eventList(s){return '<div class="sideinfo audit-panel"><strong>Recorrido de este pedido (en la simulación)</strong><ul class="auditlist">'+s.events.map(e=>'<li>'+escapeHTML(e)+'</li>').join('')+'</ul></div>'}
+function boardB2(){const c=current(),s=sim(),pending=s.status==='solicitado';if(!s.received)return '<h3>Revisar pedido</h3><div class="empty-inbox">Todavía no se ha recibido esta solicitud. Completa el paso 8 de la conversación para poder revisarla.</div>';let form='';if(pending){form='<div class="sideinfo"><h4 style="margin:0 0 8px">Revisión de la solicitud</h4><p class="guide-copy">Los datos que ha confirmado el cliente <strong>todavía no significan que el pedido esté aceptado</strong>.</p>'+(id==='2002'?'<div class="info-warn"><strong>Nuevo envase de propano pendiente de comprobación.</strong><span class="guide-copy"> Es necesario comprobar que se cumplen las condiciones del alta antes de aceptar. Marcar la casilla es solo un acto de esta simulación; no equivale a firmar un contrato.</span></div><div class="checks"><label><input type="checkbox" id="contractCheck"> He comprobado el alta del envase nuevo en esta simulación.</label></div>':'')+'<div class="control-field"><label for="plannedDate">Fecha prevista de entrega</label><input id="plannedDate" type="date" min="'+todayISO()+'" required><p class="formhelp">La decide la empresa. No es la fecha que prefería el cliente ni la fecha real de entrega.</p></div><div class="actionrow"><button class="primary" onclick="acceptOrder()">Aceptar pedido y preparar aviso al cliente</button></div><div id="acceptError" role="alert"></div><hr style="border:0;border-top:1px solid #dce6ec;margin:18px 0"><h4>O rechazar la solicitud</h4><div class="control-field"><label for="rejectReason">Motivo del rechazo</label><select id="rejectReason"><option value="">Elige un motivo</option><option value="No podemos atender la entrega solicitada">No podemos atender la entrega solicitada</option><option value="Necesitamos datos adicionales para poder atenderla">Necesitamos datos adicionales para poder atenderla</option><option value="No disponemos de los productos solicitados">No disponemos de los productos solicitados</option></select></div><button class="secondary" onclick="rejectOrder()">Rechazar solicitud </button><div id="rejectError" role="alert"></div></div>'}else if(s.status==='aceptado'){form='<div class="feedback">Pedido aceptado. Fecha prevista: '+escapeHTML(displayDate(s.date))+'.'+(id==='2002'?' Alta del nuevo envase comprobada en este ejemplo.':'')+'</div><div class="actionrow"><button class="primary" onclick="showConfirmation()">Ver aviso al cliente en WhatsApp</button><button class="outline" onclick="showBoard(\'b3\')">Registrar entrega</button></div>'}else if(s.status==='rechazado'){form='<div class="info-warn"><strong>Solicitud rechazada.</strong><br>Motivo elegido: '+escapeHTML(s.reason)+'. No se puede registrar una entrega. Puedes ver el aviso en WhatsApp o reiniciar este pedido.</div><button class="outline" onclick="showConfirmation()">Ver aviso al cliente</button>'}else{form='<div class="feedback">Este pedido figura como entregado. Su fecha prevista era el '+escapeHTML(displayDate(s.date))+'.</div><div class="actionrow"><button class="outline" onclick="showConfirmation()">Ver mensaje al cliente</button><button class="outline" onclick="showBoard(\'b3\')">Ver entrega y envases</button></div>'}return '<h3>Revisar · '+escapeHTML(c.short)+' <span class="order-ref">(pedido '+id+')</span></h3>'+flowBar(s.status)+'<div class="line"><span class="key">Cliente</span><span>'+escapeHTML(c.client)+'</span></div><div class="line"><span class="key">Dirección</span><span>'+escapeHTML(c.address)+'</span></div><div class="line"><span class="key">Origen</span><span>'+escapeHTML(c.source)+'</span></div><div class="line"><span class="key">Estado</span><span><strong>'+statusText(s.status)+'</strong></span></div><div class="tablewrap"><table><thead><tr><th>Producto</th><th>Cantidad pedida</th></tr></thead><tbody>'+c.items.map(x=>'<tr><td>'+escapeHTML(x.n)+'</td><td>'+x.q+'</td></tr>').join('')+'</tbody></table></div>'+form+eventList(s)}
+function inputNumber(name,val,idx,part){return '<input class="delivery-input" id="'+part+'-'+idx+'" type="number" min="0" step="1" inputmode="numeric" value="'+val+'" aria-label="'+escapeHTML(name)+'">'}
+function boardB3(){const c=current(),s=sim();if(!s.received)return '<h3>Entrega</h3><div class="empty-inbox">No hay entrega que registrar. Primero tiene que llegar la solicitud y ser aceptada.</div>';let content='';if(s.status==='solicitado')content='<div class="info-warn">La solicitud todavía está pendiente. <strong>La empresa debe aceptarla y fijar una fecha prevista</strong> antes de registrar una entrega.</div><button class="primary" onclick="showBoard(\'b2\')">Revisar solicitud</button>';else if(s.status==='rechazado')content='<div class="info-warn">Esta solicitud ha sido rechazada. No se puede registrar una entrega. Reinicia el pedido si quieres ensayar otra decisión.</div>';else if(s.status==='entregado')content='<div class="feedback">Entrega completa registrada solo en la simulación. Fecha de entrega: '+escapeHTML(displayDate(s.actualDate))+'.</div><div class="sideinfo"><strong>Productos entregados</strong>'+c.items.map(x=>'<div class="line"><span>'+escapeHTML(x.n)+'</span><span>'+x.q+'</span></div>').join('')+'</div><div class="tablewrap"><table><thead><tr><th>Envase</th><th>Llenos entregados</th><th>Vacíos recogidos</th><th>Cascos nuevos entregados</th></tr></thead><tbody>'+s.actualMoves.map(m=>'<tr><td>'+escapeHTML(m.type)+'</td><td>'+m.full+'</td><td>'+m.empty+'</td><td>'+m.newCount+'</td></tr>').join('')+'</tbody></table></div>'+(id==='2002'?'<div class="readout">También se ha registrado la entrega de <strong>1 estufa tipo seta</strong>. El alta del casco nuevo fue comprobada previamente en la revisión.</div>':'')+eventList(s);else content='<p><strong>Fecha prevista:</strong> '+escapeHTML(displayDate(s.date))+'. <span class="guide-copy">Solo registraremos entregas <strong>completas</strong> en esta versión.</span></p><div class="sideinfo"><div class="control-field"><label for="actualDeliveryDate">Fecha de entrega realizada (simulada)</label><input id="actualDeliveryDate" type="date" value="'+escapeHTML(s.date)+'" required><p class="formhelp">Puede coincidir o no con la fecha prevista; La empresa registra la fecha que realmente se ha entregado en este ejemplo.</p></div><h4 style="margin:0 0 9px">1. Comprobar los productos realmente entregados</h4><div class="tablewrap"><table class="delivery-table"><thead><tr><th>Producto</th><th>Pedido</th><th>Entregado</th></tr></thead><tbody>'+c.items.map((x,i)=>'<tr><td>'+escapeHTML(x.n)+'</td><td>'+x.q+'</td><td>'+inputNumber(x.n,x.q,i,'prod')+'</td></tr>').join('')+'</tbody></table></div><h4 style="margin:15px 0 9px">2. Comprobar los envases</h4><div class="tablewrap"><table class="delivery-table"><thead><tr><th>Tipo</th><th>Llenos entregados</th><th>Vacíos recogidos</th><th>Cascos nuevos entregados</th></tr></thead><tbody>'+c.moves.map((m,i)=>'<tr><td>'+escapeHTML(m.type)+'</td><td>'+inputNumber('Llenos '+m.type,m.full,i,'full')+'</td><td>'+inputNumber('Vacíos '+m.type,m.empty,i,'empty')+'</td><td>'+inputNumber('Nuevos '+m.type,m.newCount,i,'new')+'</td></tr>').join('')+'</tbody></table></div><p class="formhelp">Las cantidades están rellenadas con el resultado previsto de esta prueba; Es necesario comprobarlas. Si hubo diferencias, esta prueba solo permite confirmar la entrega completa.</p>'+(id==='2002'?'<div class="readout">El pedido incluye <strong>2 recambios de propano, 1 casco nuevo lleno y 1 estufa</strong>. Por eso se entregan 3 bombonas llenas, se recogen 2 vacías y se entrega 1 casco nuevo.</div>':'')+'<div class="checks"><label><input id="ackDelivery" type="checkbox"> Confirmo que he comprobado la entrega completa y los envases.</label></div><button class="primary" onclick="recordDelivery()">Registrar entrega completa (simulación)</button><div id="deliveryError" role="alert"></div></div>';return '<h3>Entrega · '+escapeHTML(c.short)+' <span class="order-ref">(pedido '+id+')</span></h3>'+flowBar(s.status)+'<p class="guide-copy">La empresa registra lo que se entrega y los envases que se recogen, sin incluir repartidores, pagos ni entregas parciales.</p>'+content}
+// CLIENTES. Agenda mínima, con tres fichas ficticias y edición local; sin servidor.
+function clientNature(c){return c.segment==='Particular'?'Particular':'Empresa'}
+function clientOrderInfo(key){
+ if(!cases[key])return 'Sin pedidos en esta demostración';
+ return simulation[key].received?statusText(simulation[key].status):'Sin solicitud recibida todavía';
+}
+function clientFormHTML(c,newClient){
+ const kind=newClient?'<div class="control-field"><label for="clientType">Tipo de cliente</label><select id="clientType"><option value="Gasolinera">Gasolinera · empresa</option><option value="Hostelería">Hostelería · empresa</option><option value="Particular">Particular</option></select></div>':'<p class="small">'+escapeHTML(clientNature(c))+' · '+escapeHTML(c.segment)+'</p>';
+ return '<h3>'+(newClient?'Nuevo cliente':'Editar ficha de cliente')+'</h3>'
+ +'<p class="guide-copy">Esta ficha es ficticia. No introduzcas datos personales ni teléfonos reales.</p>'
+ +'<form id="clientForm" onsubmit="saveClient(event)">'
+ +kind
+ +'<div class="control-field"><label for="clientName">Nombre o razón social</label><input id="clientName" type="text" maxlength="90" value="'+escapeHTML(c.name||'')+'" required></div>'
+ +'<div class="control-field"><label for="clientAddress">Dirección de entrega</label><input id="clientAddress" type="text" maxlength="140" value="'+escapeHTML(c.address||'')+'" required></div>'
+ +'<div class="control-field"><label for="clientNotes">Notas</label><textarea id="clientNotes" maxlength="240" rows="3" placeholder="Nota de prueba (opcional)">'+escapeHTML(c.notes||'')+'</textarea></div>'
+ +'<div id="clientError" role="alert"></div><div class="actionrow"><button class="primary" type="submit">Guardar ficha</button><button class="secondary" type="button" onclick="cancelClientEdit()">Cancelar</button></div>'
+ +'</form><div class="small">Los cambios solo se mantienen mientras esta demostración está abierta.</div>';
+}
+function boardB4(){
+ if(clientScreen==='edit'){const c=clients[selectedClient];return c?clientFormHTML(c,false):'<h3>Clientes</h3>';}
+ if(clientScreen==='new'){return clientFormHTML({name:'',address:'',notes:''},true);}
+ if(clientScreen==='detail'){
+  const c=clients[selectedClient];if(!c){clientScreen='list';return boardB4();}
+  const hasOrder=!!cases[c.key]&&!!simulation[c.key].received;
+  return '<div class="actionrow"><button type="button" class="secondary" onclick="backToClients()">← Clientes</button></div>'
+  +'<h3>'+escapeHTML(c.name)+'</h3>'
+  +'<div class="sideinfo"><div class="line"><span class="key">Naturaleza</span><span>'+escapeHTML(clientNature(c))+'</span></div>'
+  +'<div class="line"><span class="key">Tipo</span><span>'+escapeHTML(c.segment)+'</span></div>'
+  +'<div class="line"><span class="key">Dirección</span><span>'+escapeHTML(c.address)+'</span></div>'
+  +'<div class="line"><span class="key">WhatsApp</span><span>No se muestra en esta prueba</span></div>'
+  +'<div class="line"><span class="key">Pedido</span><span>'+escapeHTML(clientOrderInfo(c.key))+'</span></div>'
+  +(c.notes?'<div class="client-notes"><strong>Notas:</strong> '+escapeHTML(c.notes)+'</div>':'')+'</div>'
+  +'<div class="actionrow"><button class="primary" onclick="editClient()">Editar ficha</button>'
+  +(hasOrder?'<button class="outline" onclick="openInboxOrder(\''+c.key+'\')">Ver pedido '+c.key+'</button>':'')+'</div>'
+  +'<p class="guide-copy">La agenda es una simulación independiente de WhatsApp; aquí no se guardan datos en ninguna base real.</p>';
+ }
+ const cs=Object.values(clients);
+ return '<h3>Clientes</h3>'
+ +'<p class="guide-copy">Empresas y particulares. Las fichas iniciales muestran cómo identificar a quien hace un pedido.</p>'
+ +'<div class="actionrow"><button class="primary" onclick="newClient()">+ Nuevo cliente</button></div>'
+ +'<div class="tablewrap"><table><thead><tr><th>Cliente</th><th>Tipo</th><th>Pedido</th><th></th></tr></thead><tbody>'
+ +cs.map(c=>'<tr class="clickrow" tabindex="0" onclick="selectClient(\''+c.key+'\')" onkeydown="if(event.key===\'Enter\'){selectClient(\''+c.key+'\')}" title="Abrir ficha de cliente">'
+ +'<td>'+escapeHTML(c.name)+'</td><td>'+escapeHTML(c.segment)+'</td><td>'+escapeHTML(clientOrderInfo(c.key))+'</td>'
+ +'<td><button class="open-order" onclick="event.stopPropagation();selectClient(\''+c.key+'\')">Ver ficha</button></td></tr>').join('')
+ +'</tbody></table></div>'
+ +'<div class="small">Datos ficticios. No se guardan en el servidor. No introduzcas datos reales en esta demostración.</div>';
+}
+function selectClient(key){if(!clients[key])return;selectedClient=key;clientScreen='detail';showBoard('b4')}
+function editClient(){clientScreen='edit';showBoard('b4')}
+function backToClients(){clientScreen='list';showBoard('b4')}
+function newClient(){clientScreen='new';showBoard('b4')}
+function cancelClientEdit(){clientScreen=clientScreen==='new'?'list':'detail';showBoard('b4')}
+function saveClient(event){
+ event.preventDefault();
+ const name=document.getElementById('clientName').value.trim();
+ const address=document.getElementById('clientAddress').value.trim();
+ const notes=document.getElementById('clientNotes').value.trim();
+ if(!name||!address){showError('clientError','Indica un nombre y una dirección ficticios.');return}
+ if(clientScreen==='new'){
+  const segment=document.getElementById('clientType').value;
+  const key='nuevo'+(nextClientKey++);
+  clients[key]={key,name,address,segment,notes};selectedClient=key;
+ } else {
+  const c=clients[selectedClient];if(!c)return;
+  c.name=name;c.address=address;c.notes=notes;
+  if(cases[selectedClient]){
+   cases[selectedClient].client=name;cases[selectedClient].address=address;
+  }
+ }
+ clientScreen='detail';render();showToast('Ficha ficticia guardada en esta sesión');
+}
+function boardB5(){return '<h3>Productos disponibles en la prueba</h3><p class="guide-copy">Estas diez referencias son ficticias. En una fase posterior se comprobará con la empresa qué productos y denominaciones utilizará realmente.</p><div class="tablewrap"><table><thead><tr><th>Código</th><th>Producto</th></tr></thead><tbody>'+catalog.map(x=>'<tr><td>'+escapeHTML(x[0])+'</td><td>'+escapeHTML(x[1])+'</td></tr>').join('')+'</tbody></table></div><div class="note">En esta versión no se pueden modificar productos ni precios. Tampoco se han incorporado cobros, facturas ni repartidores.</div>'}
+function showError(id,msg){const el=document.getElementById(id);if(el)el.innerHTML='<div class="formerror">'+escapeHTML(msg)+'</div>'}
+function acceptOrder(){const s=sim();if(!s.received||s.status!=='solicitado')return;if(id==='2002'&&!document.getElementById('contractCheck').checked){showError('acceptError','Antes de aceptar el pedido debes marcar que has comprobado el alta del casco nuevo.');return}const date=document.getElementById('plannedDate').value;if(!date){showError('acceptError','Elige una fecha prevista de entrega.');return}if(date<todayISO()){showError('acceptError','La fecha prevista no puede ser anterior a hoy.');return}s.status='aceptado';s.date=date;s.contractChecked=id==='2002';if(id==='2002')s.events.push('Se comprueba el alta del nuevo envase (simulación)');s.events.push('La empresa acepta el pedido y fija la entrega prevista: '+displayDate(date));s.events.push('Se prepara el mensaje de confirmación para el cliente (simulado)');step=7;render();showBoard('b2');showToast('Pedido aceptado. Puedes consultar el aviso al cliente.')}
+function rejectOrder(){const s=sim();if(!s.received||s.status!=='solicitado')return;const reason=document.getElementById('rejectReason').value;if(!reason){showError('rejectError','Elige un motivo antes de rechazar la solicitud.');return}s.status='rechazado';s.reason=reason;s.events.push('La empresa rechaza la solicitud. Motivo: '+reason);s.events.push('Se prepara el aviso al cliente (simulado)');step=7;render();showBoard('b2');showToast('Solicitud rechazada en la simulación')}
+function showConfirmation(){step=7;showArea('front');renderFront()}
+function validInteger(v){return /^\d+$/.test(v)?Number(v):null}
+function recordDelivery(){const s=sim(),c=current();if(!s.received||s.status!=='aceptado')return;const items=c.items.map((x,i)=>validInteger(document.getElementById('prod-'+i).value));const moves=c.moves.map((m,i)=>({type:m.type,full:validInteger(document.getElementById('full-'+i).value),empty:validInteger(document.getElementById('empty-'+i).value),newCount:validInteger(document.getElementById('new-'+i).value)}));if(items.some(x=>x===null)||moves.some(x=>[x.full,x.empty,x.newCount].some(y=>y===null))){showError('deliveryError','Todas las cantidades deben ser números enteros, iguales o mayores que cero.');return}if(items.some((x,i)=>x!==c.items[i].q)||moves.some((m,i)=>m.full!==c.moves[i].full||m.empty!==c.moves[i].empty||m.newCount!==c.moves[i].newCount)){showError('deliveryError','Las cantidades no coinciden con la entrega completa prevista. Revisa lo anotado: los casos con diferencias se tratarán en otra fase.');return}const actualDate=document.getElementById('actualDeliveryDate').value;if(!/^\d{4}-\d{2}-\d{2}$/.test(actualDate)){showError('deliveryError','Indica la fecha de entrega realizada.');return}if(!document.getElementById('ackDelivery').checked){showError('deliveryError','Marca la confirmación de que has comprobado la entrega y los envases.');return}s.status='entregado';s.actualMoves=moves;s.actualDate=actualDate;s.events.push('La empresa registra la entrega completa y los envases: '+displayDate(actualDate));render();showBoard('b3');showToast('Entrega completa registrada en la simulación')}
+function focusMobileArea(target){if(!window.matchMedia('(max-width:700px), (max-width:1100px) and (orientation:landscape) and (max-height:600px)').matches)return;requestAnimationFrame(()=>{const el=document.getElementById(target);if(el)el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'})})}
+const requested=new URLSearchParams(location.search).get('pedido')||'2001';if(cases[requested])id=requested;render();showArea('front',false);setMode('practica');
 </script>
 </body>
 </html>
