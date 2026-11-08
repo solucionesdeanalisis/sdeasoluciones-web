@@ -1,0 +1,16 @@
+SdeA-Pedidos - revision 8 - 7 de noviembre de 2026
+
+Novedad: restauracion del aspecto visual de la bandeja de pedidos en movil.
+Cada pedido es un boton completo, como en la revision 7, con nombre de cliente, estado, referencia y accion Revisar.
+En ordenador se conserva la tabla anterior.
+
+Favicon: se han integrado los archivos originales SdeA facilitados por el propietario. El .ico se utiliza para la pestana del navegador. Se han adaptado al tamano nominal las versiones PNG para navegadores y moviles.
+Tipografia: la pagina usa la fuente Cookie mediante Google Fonts, como la revision anterior. La fuente no se incluye en el paquete.
+
+INSTALACION / PRUEBA:
+1. Descomprimir el ZIP.
+2. Subir index.html y la carpeta faviconsdea/ respetando su estructura, a una carpeta independiente de la web, por ejemplo /demos/sdea-pedidos-r8/.
+3. En Chrome movil, abrir esa nueva URL, llegar al paso 8 y tocar cualquier punto del pedido en la bandeja para acceder a su revision.
+4. Comprobar los tres ejemplos y ambas vistas.
+
+Solo demuestra un recorrido ficticio; no hay mensajes reales ni conexion a D1, Cloudflare ni WhatsApp.
